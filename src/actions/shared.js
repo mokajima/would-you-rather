@@ -1,4 +1,4 @@
-import { _getUsers, _getQuestions } from '../utils/_DATA'
+import { _getUsers, _getQuestions, _saveQuestion } from '../utils/_DATA'
 import { receiveUsers } from '../actions/users'
 import { receiveQuestions } from '../actions/questions'
 import { setAuthedUser } from '../actions/authedUser'
@@ -17,5 +17,25 @@ export function handleInitialData() {
         dispatch(receiveQuestions(questions))
         dispatch(setAuthedUser('sarahedo'))
       })
+  }
+}
+
+function addQuestion(question) {
+  return {
+    type: ADD_QUESTION,
+    question
+  }
+}
+
+export function handleAddQuestion(optionOneText, optionTwoText) {
+  return (dispatch, getState) => {
+    const { authedUser } = getState()
+
+    return _saveQuestion({
+      optionOneText,
+      optionTwoText,
+      author: authedUser
+    })
+      .then((question) => dispatch(addQuestion(question)))
   }
 }
