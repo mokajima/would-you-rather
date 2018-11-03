@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
-import LeaderBoard from './LeaderBoard'
+import QuestionsList from './QuestionsList'
 
 class App extends Component {
   componentDidMount() {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <h1>Would You Rather...?</h1>
-        <LeaderBoard />
+        <QuestionsList />
       </div>
     )
   }
