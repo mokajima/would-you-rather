@@ -25,7 +25,9 @@ function Poll(props) {
     )
 }
 
-function mapStateToProps({ authedUser, users, questions }, { id }) {
+function mapStateToProps({ authedUser, users, questions }, props) {
+  const { id } = props.match.params
+
   const question = questions[id]
   const author = question ? users[question.author] : null
   const answer = authedUser ? users[authedUser].answers[id] : null
@@ -33,7 +35,8 @@ function mapStateToProps({ authedUser, users, questions }, { id }) {
   return {
     question,
     author,
-    answer
+    answer,
+    id
   }
 }
 

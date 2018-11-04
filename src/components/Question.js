@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function Questions(props) {
   return (
@@ -10,6 +11,7 @@ function Questions(props) {
         <div>
           <span>Would you rather</span>
           <p>...{props.question.optionOne.text.substr(0, 14)}...</p>
+          <Link to={`/questions/${props.id}`}>View Poll</Link>
         </div>
       </div>
     </div>

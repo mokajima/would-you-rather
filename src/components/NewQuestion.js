@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import { handleAddQuestion } from '../actions/shared'
 
 class NewQuestion extends Component {
@@ -29,6 +30,8 @@ class NewQuestion extends Component {
       optionOne: '',
       optionTwo: ''
     })
+
+    this.props.history.push('/')
   }
 
   render() {
@@ -61,4 +64,4 @@ class NewQuestion extends Component {
   }
 }
 
-export default connect()(NewQuestion)
+export default withRouter(connect()(NewQuestion))
