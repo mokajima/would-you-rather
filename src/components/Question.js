@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-function Questions(props) {
+function Question(props) {
   return (
     <div>
       <span>{props.author.name} asks: </span>
@@ -28,4 +28,4 @@ function mapStateToProps({ users, questions }, { id }) {
   }
 }
 
-export default connect(mapStateToProps)(Questions)
+export default connect(mapStateToProps)(Question)
