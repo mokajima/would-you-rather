@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
-import Poll from './Poll'
+import Login from './Login'
+import QuestionsList from './QuestionsList'
 
 class App extends Component {
   componentDidMount() {
@@ -12,10 +13,19 @@ class App extends Component {
     return (
       <div>
         <h1>Would You Rather...?</h1>
-        <Poll id="vthrdm985a262al8qx3do" />
+        {this.props.authedUser
+          ? <QuestionsList />
+          : <Login />
+        }
       </div>
     )
   }
 }
 
-export default connect()(App)
+function mapStateToProps({ authedUser }) {
+  return {
+    authedUser
+  }
+}
+
+export default connect(mapStateToProps)(App)
