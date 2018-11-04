@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { handleInitialData } from '../actions/shared'
+import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
 import Login from './Login'
 import NewQuestion from './NewQuestion'
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
+          <LoadingBar />
           <h1>Would You Rather...?</h1>
           <Nav />
           {this.props.authedUser
