@@ -33,14 +33,13 @@ class Login extends Component {
           <span>Please sign in to continue</span>
         </div>
         <form onSubmit={this.handleSubmit}>
-          <select onChange={this.handleChange}>
+          <select
+            value={selected}
+            onChange={this.handleChange}
+          >
             <option value="">Select User</option>
             {Object.keys(users).map((id) => (
-              <option
-                key={id}
-                value={id}
-                selected={id === selected}
-              >
+              <option key={id} value={id}>
                 {users[id].name}
               </option>
             ))}
