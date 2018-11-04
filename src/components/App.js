@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { handleInitialData } from '../actions/shared'
-import QuestionsList from './QuestionsList'
+import Poll from './Poll'
 
 class App extends Component {
   componentDidMount() {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <h1>Would You Rather...?</h1>
-        <QuestionsList />
+        <Poll id="vthrdm985a262al8qx3do" />
       </div>
     )
   }
