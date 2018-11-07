@@ -7,6 +7,10 @@ class Login extends Component {
     selected: ''
   }
 
+  /**
+   * @description Update this.state.selected
+   * @param {object} e - The event object
+   */
   handleChange = (e) => {
     const target = e.target
     const value = target.value
@@ -16,6 +20,10 @@ class Login extends Component {
     })
   }
 
+  /**
+   * @description Dispatch SET_AUTHED_USER action
+   * @param {object} e - The event object
+   */
   handleSubmit = (e) => {
     e.preventDefault()
 

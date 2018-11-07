@@ -4,6 +4,10 @@ import { NavLink, withRouter } from 'react-router-dom'
 import { removeAuthedUser } from '../actions/authedUser'
 
 class Nav extends Component {
+
+  /**
+   * @description Dispatch REMOVE_AUTHED_USER action
+   */
   handleClick = () => {
     this.props.dispatch(removeAuthedUser())
     this.props.history.push('/')

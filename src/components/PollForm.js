@@ -7,6 +7,10 @@ class PollForm extends Component {
     checked: 'optionOne'
   }
 
+  /**
+   * @description Update this.state.checked
+   * @param {object} e - The event object
+   */
   handleChange = (e) => {
     const target = e.target
     const value = target.value
@@ -16,6 +20,10 @@ class PollForm extends Component {
     })
   }
 
+  /**
+   * @description Dispatch an async action
+   * @param {object} e - The event object
+   */
   handleSubmit = (e) => {
     e.preventDefault()
 

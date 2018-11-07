@@ -9,6 +9,10 @@ class NewQuestion extends Component {
     optionTwo: ''
   }
 
+  /**
+   * @description Update this.state
+   * @param {object} e - The event object
+   */
   handleChange = (e) => {
     const target = e.target
     const value = target.value
@@ -19,6 +23,10 @@ class NewQuestion extends Component {
     })
   }
 
+  /**
+   * @description Dispatch an async action
+   * @param {object} e - The event object
+   */
   handleSubmit = (e) => {
     e.preventDefault()
 
