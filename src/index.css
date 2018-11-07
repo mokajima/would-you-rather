@@ -504,7 +504,7 @@ h2 {
 .chart__text {
   padding: 0 10px;
   position: absolute;
-  transform: translateX(-100%);
+  right: 0;
 }
 
 /* logo */

@@ -16,7 +16,7 @@ function Data(props) {
       <p>Would you rather {question[option].text}?</p>
       <div className="chart">
         <span className="chart__bar" style={{ width: rate + '%' }}></span>
-        <span className="chart__text" style={{ left: rate + '%' }}>{rate.toFixed(0)}%</span>
+        <span className="chart__text">{rate.toFixed(0)}%</span>
       </div>
       {option === answer
         ? <p className="center">{question[option].votes.length} out of {total} votes (Your vote)</p>
