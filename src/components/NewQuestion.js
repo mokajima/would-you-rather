@@ -38,28 +38,39 @@ class NewQuestion extends Component {
     const { optionOne, optionTwo } = this.state
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          name="optionOne"
-          placeholder="Enter Option One Text Here"
-          value={optionOne}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="optionTwo"
-          placeholder="Enter Option Two Text Here"
-          value={optionTwo}
-          onChange={this.handleChange}
-        />
-        <button
-          type="submit"
-          disabled={'' === optionOne || '' === optionTwo}
+      <div className="new-question">
+        <h2 className="new-question__title">Create New Question</h2>
+        <form
+          className="new-question__form"
+          onSubmit={this.handleSubmit}
         >
-          Submit
-        </button>
-      </form>
+          <p>Would you rather...</p>
+          <input
+            type="text"
+            className="input"
+            name="optionOne"
+            placeholder="Enter Option One Text Here"
+            value={optionOne}
+            onChange={this.handleChange}
+          />
+          <hr />
+          <input
+            type="text"
+            className="input"
+            name="optionTwo"
+            placeholder="Enter Option Two Text Here"
+            value={optionTwo}
+            onChange={this.handleChange}
+          />
+          <button
+            type="submit"
+            className="new-question__btn btn"
+            disabled={'' === optionOne || '' === optionTwo}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     )
   }
 }

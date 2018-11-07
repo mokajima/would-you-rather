@@ -27,19 +27,25 @@ class PollForm extends Component {
     const { checked } = this.state
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <form
+        className="poll-form"
+        onSubmit={this.handleSubmit}
+      >
+        <p class="poll-form__title">Would You Rather...</p>
+        <label className="label">
           <input
             type="radio"
+            className="radio"
             value="optionOne"
             checked={'optionOne' === checked}
             onChange={this.handleChange}
           />
           {question.optionOne.text}
         </label>
-        <label>
+        <label className="label">
           <input
             type="radio"
+            className="radio"
             value="optionTwo"
             checked={'optionTwo' === checked}
             onChange={this.handleChange}
@@ -48,6 +54,7 @@ class PollForm extends Component {
         </label>
         <button
           type="submit"
+          className="btn"
           disabled={'' === checked}
         >
           Submit

@@ -6,14 +6,31 @@ function ScoreCard(props) {
   const createdQuestions = props.user.questions.length
 
   return (
-    <div>
-      <img src={props.user.avatarURL} alt="" />
-      <div>
-        <span>{props.user.name}</span>
-        <span>Answered questions: {answeredQuestions}</span>
-        <span>Created questions: {createdQuestions}</span>
+    <div className="score-card">
+      <div className="score-card__col score-card__avatar">
+        <img
+          className="avatar avatar--md"
+          src={props.user.avatarURL}
+          alt=""
+        />
       </div>
-      <span>Score: {answeredQuestions + createdQuestions}</span>
+      <div className="score-card__col">
+        <span className="score-card__name">{props.user.name}</span>
+        <table className="score-card__table">
+          <tr>
+            <th>Answered questions</th>
+            <td>{answeredQuestions}</td>
+          </tr>
+          <tr>
+            <th>Created questions</th>
+            <td>{createdQuestions}</td>
+          </tr>
+        </table>
+      </div>
+      <dl className="score-card__col score">
+        <dt className="score__title">Score</dt>
+        <dd className="score__data">{answeredQuestions + createdQuestions}</dd>
+      </dl>
     </div>
   )
 }

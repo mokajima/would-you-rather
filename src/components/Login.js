@@ -27,13 +27,17 @@ class Login extends Component {
     const { selected } = this.state
 
     return (
-      <div>
-        <div>
-          <span>Welcome to the Would You Rather App!</span>
-          <span>Please sign in to continue</span>
-        </div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="login-form container">
+        <header className="login-form__header">
+          <h2 className="login-form__title">Welcome to the Would You Rather App!</h2>
+          <p className="login-form__desc">Please sign in to continue</p>
+        </header>
+        <form
+          className="login-form__form"
+          onSubmit={this.handleSubmit}
+        >
           <select
+            className="select"
             value={selected}
             onChange={this.handleChange}
           >
@@ -46,6 +50,7 @@ class Login extends Component {
           </select>
           <button
             type="submit"
+            className="btn"
             disabled={'' === selected}
           >
             Submit

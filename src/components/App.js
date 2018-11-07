@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 import { handleInitialData } from '../actions/shared'
 import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
@@ -19,17 +19,23 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <LoadingBar />
-          <h1>Would You Rather...?</h1>
-          <Nav />
+          <LoadingBar style={{ backgroundColor: '#15b394' }} />
+          <header className="header">
+            <div className="header__inner">
+              <h1 className="header__title">
+                <Link to="/">Would You Rather...?</Link>
+              </h1>
+              <Nav />
+            </div>
+          </header>
           {this.props.authedUser
             ? (
-              <Fragment>
+              <div className="container">
                 <Route path="/" exact component={QuestionsList} />
                 <Route path="/add" component={NewQuestion} />
                 <Route path="/leaderboard" component={LeaderBoard} />
                 <Route path="/questions/:id" component={Poll} />
-              </Fragment>
+              </div>
             )
             : <Login />
           }

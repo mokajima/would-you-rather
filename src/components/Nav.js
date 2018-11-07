@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import { NavLink, withRouter } from 'react-router-dom'
 import { removeAuthedUser } from '../actions/authedUser'
@@ -13,22 +13,30 @@ class Nav extends Component {
     const { user } = this.props
 
     return (
-      <nav>
-        <ul>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/add">New Question</NavLink>
-          <NavLink to="/leaderboard">Leader Board</NavLink>
-        </ul>
+      <Fragment>
         {user && (
-          <ul>
-            <li>
-              Hello, {user.name}
-              <img src={user.avatarURL} alt="" />
-            </li>
-            <li onClick={this.handleClick}>Logout</li>
-          </ul>
+          <Fragment>
+            <nav className="nav">
+              <ul className="nav__list">
+                <li className="nav__list-item">
+                  <NavLink to="/add">New Question</NavLink>
+                </li>
+                <li className="nav__list-item">
+                  <NavLink to="/leaderboard">Leader Board</NavLink>
+                </li>
+                <li
+                  className="nav__list-item nav__list-item--logout"
+                  onClick={this.handleClick}>
+                  Logout
+                </li>
+              </ul>
+            </nav>
+            <p>
+              Hello, {user.name} <img className="avatar avatar--sm" src={user.avatarURL} alt="" />
+            </p>
+          </Fragment>
         )}
-      </nav>
+      </Fragment>
     )
   }
 }

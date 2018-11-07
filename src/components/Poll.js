@@ -2,17 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux'
 import Result from './Result'
 import PollForm from './PollForm'
+import logo from '../logo.svg'
 
 function Poll(props) {
   const { question, author, answer, id } = props
 
   return question
     ? (
-      <div>
-        <span>{author.name} asks:</span>
-        <img src={author.avatarURL} alt="" />
-        <div>
-          <span>Would You Rather...</span>
+      <div className="card">
+        <p className="card__title">{author.name} asks:</p>
+        <div className="card__content">
+          <div className="card__avatar">
+            <img
+              className="avatar avatar--lg"
+              src={props.author.avatarURL}
+              alt=""
+            />
+          </div>
           {answer
             ? <Result id={id} />
             : <PollForm id={id} / >
@@ -21,7 +27,12 @@ function Poll(props) {
       </div>
     )
     : (
-      <div>404</div>
+      <div>
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+        <p className="center">Oops, the page cannot be found.</p>
+      </div>
     )
 }
 
