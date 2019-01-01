@@ -2,6 +2,8 @@
 
 "Would You Rather?" is a web app that lets a user play the "Would You Rather?" game.
 
+![Screenshot](https://mokajima.github.io/portfolio/images/would-you-rather.jpg)
+
 ## Dependencies
 
 - [React](https://github.com/facebook/react)
