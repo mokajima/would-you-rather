@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Data from './Data'
 
 function Result(props) {
