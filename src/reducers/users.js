@@ -8,7 +8,7 @@ export default function users(state = {}, action) {
         ...state,
         ...action.users
       }
-    case ADD_QUESTION :
+    case ADD_QUESTION : {
       const { question } = action
 
       return {
@@ -18,7 +18,8 @@ export default function users(state = {}, action) {
           questions: state[question.author].questions.concat([question.id])
         }
       }
-    case ANSWER_QUESTION :
+    }
+    case ANSWER_QUESTION : {
       const { authedUser } = action
       return {
         ...state,
@@ -30,6 +31,7 @@ export default function users(state = {}, action) {
           }
         }
       }
+    }
     default :
       return state
   }
