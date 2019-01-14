@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { NavLink, withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { removeAuthedUser } from '../actions/authedUser'
 
 class Nav extends Component {
@@ -43,6 +44,15 @@ class Nav extends Component {
       </Fragment>
     )
   }
+}
+
+Nav.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  user: PropTypes.oneOfType([
+    PropTypes.object.isRequired,
+    PropTypes.oneOf([null]).isRequired
+  ])
 }
 
 function mapStateToProps({ authedUser, users }) {

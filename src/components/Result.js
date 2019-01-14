@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Data from './Data'
 
 function Result(props) {
@@ -11,6 +12,10 @@ function Result(props) {
       <Data id={id} option="optionTwo" />
     </div>
   )
+}
+
+Result.propTypes = {
+  id: PropTypes.string.isRequired
 }
 
 export default Result

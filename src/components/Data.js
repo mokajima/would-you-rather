@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 function Data(props) {
   const { question, answer, option } = props
@@ -24,6 +25,12 @@ function Data(props) {
       }
     </div>
   )
+}
+
+Data.propTypes = {
+  question: PropTypes.object.isRequired,
+  answer: PropTypes.string.isRequired,
+  option: PropTypes.string.isRequired
 }
 
 function mapStateToProps({ authedUser, users, questions }, { id, option }) {

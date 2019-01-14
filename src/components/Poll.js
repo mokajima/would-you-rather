@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import Result from './Result'
 import PollForm from './PollForm'
 import logo from '../logo.svg'
@@ -34,6 +35,19 @@ function Poll(props) {
         <p className="center">Oops, the page cannot be found.</p>
       </div>
     )
+}
+
+Poll.propTypes = {
+  question: PropTypes.object.isRequired,
+  author: PropTypes.oneOfType([
+    PropTypes.object.isRequired,
+    PropTypes.oneOf([null]).isRequired
+  ]),
+  answer: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.oneOf([null]).isRequired
+  ]),
+  id: PropTypes.string.isRequired
 }
 
 function mapStateToProps({ authedUser, users, questions }, props) {

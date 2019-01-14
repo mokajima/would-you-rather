@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { handleAnswerQuestion } from '../actions/shared'
 
 class PollForm extends Component {
@@ -70,6 +71,12 @@ class PollForm extends Component {
       </form>
     )
   }
+}
+
+PollForm.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  question: PropTypes.object.isRequired
 }
 
 function mapStateToProps({ authedUser, users, questions }, { id }) {

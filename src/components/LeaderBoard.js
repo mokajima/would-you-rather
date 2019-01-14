@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import ScoreCard from './ScoreCard'
 
 function LeaderBoard(props) {
@@ -10,6 +11,10 @@ function LeaderBoard(props) {
       ))}
     </div>
   )
+}
+
+LeaderBoard.propTypes = {
+  userIds: PropTypes.array.isRequired
 }
 
 function mapStateToProps({ users }) {

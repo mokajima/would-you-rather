@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Question from './Question'
 
@@ -23,6 +24,11 @@ function QuestionsList(props) {
       </TabPanel>
     </Tabs>
   )
+}
+
+QuestionsList.propTypes = {
+  unansweredQuestions: PropTypes.array.isRequired,
+  answeredQuestions: PropTypes.array.isRequired
 }
 
 function mapStateToProps({ authedUser, users, questions }) {

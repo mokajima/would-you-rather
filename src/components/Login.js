@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { setAuthedUser } from '../actions/authedUser'
 
 class Login extends Component {
@@ -67,6 +68,11 @@ class Login extends Component {
       </div>
     )
   }
+}
+
+Login.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  users: PropTypes.object.isRequired
 }
 
 function mapStateToProps({ users }) {

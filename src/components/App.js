@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { handleInitialData } from '../actions/shared'
 import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
@@ -43,6 +44,14 @@ class App extends Component {
       </BrowserRouter>
     )
   }
+}
+
+App.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  authedUser: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.oneOf([null]).isRequired
+  ])
 }
 
 function mapStateToProps({ authedUser }) {

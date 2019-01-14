@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 function Question(props) {
   return (
@@ -22,6 +23,12 @@ function Question(props) {
       </div>
     </div>
   )
+}
+
+Question.propTypes = {
+  question: PropTypes.object.isRequired,
+  author: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired
 }
 
 function mapStateToProps({ users, questions }, { id }) {

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 function ScoreCard(props) {
@@ -33,6 +34,10 @@ function ScoreCard(props) {
       </dl>
     </div>
   )
+}
+
+ScoreCard.propTypes = {
+  user: PropTypes.object.isRequired
 }
 
 function mapStateToProps({ users }, { id }) {

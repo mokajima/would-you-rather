@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import { handleAddQuestion } from '../actions/shared'
 
 class NewQuestion extends Component {
@@ -81,6 +82,11 @@ class NewQuestion extends Component {
       </div>
     )
   }
+}
+
+NewQuestion.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 }
 
 export default withRouter(connect()(NewQuestion))
