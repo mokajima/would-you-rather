@@ -40,7 +40,7 @@ class PollForm extends Component {
         className="poll-form"
         onSubmit={this.handleSubmit}
       >
-        <p class="poll-form__title">Would You Rather...</p>
+        <p className="poll-form__title">Would You Rather...</p>
         <label className="label">
           <input
             type="radio"
