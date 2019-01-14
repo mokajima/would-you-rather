@@ -79,7 +79,7 @@ PollForm.propTypes = {
   question: PropTypes.object.isRequired
 }
 
-function mapStateToProps({ authedUser, users, questions }, { id }) {
+function mapStateToProps({ questions }, { id }) {
   const question = questions[id]
 
   return {
