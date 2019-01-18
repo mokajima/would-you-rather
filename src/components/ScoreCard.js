@@ -18,14 +18,16 @@ function ScoreCard(props) {
       <div className="score-card__col">
         <span className="score-card__name">{props.user.name}</span>
         <table className="score-card__table">
-          <tr>
-            <th>Answered questions</th>
-            <td>{answeredQuestions}</td>
-          </tr>
-          <tr>
-            <th>Created questions</th>
-            <td>{createdQuestions}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Answered questions</th>
+              <td>{answeredQuestions}</td>
+            </tr>
+            <tr>
+              <th>Created questions</th>
+              <td>{createdQuestions}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <dl className="score-card__col score">
