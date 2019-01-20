@@ -2,9 +2,7 @@ import { _getUsers, _getQuestions, _saveQuestion, _saveQuestionAnswer } from '..
 import { receiveUsers } from '../actions/users'
 import { receiveQuestions } from '../actions/questions'
 import { showLoading, hideLoading } from 'react-redux-loading'
-
-export const ADD_QUESTION = 'ADD_QUESTION'
-export const ANSWER_QUESTION = 'ANSWER_QUESTION'
+import { ADD_QUESTION, ANSWER_QUESTION } from './types'
 
 export function handleInitialData() {
   return (dispatch) => {
