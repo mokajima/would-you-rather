@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import { setAuthedUser } from '../actions/authedUser'
 
 class Login extends Component {
@@ -37,6 +38,9 @@ class Login extends Component {
 
     return (
       <div className="login-form container">
+        <Helmet>
+          <title>Login | Would You Rather?</title>
+        </Helmet>
         <header className="login-form__header">
           <h2 className="login-form__title">Welcome to the Would You Rather App!</h2>
           <p className="login-form__desc">Please sign in to continue</p>

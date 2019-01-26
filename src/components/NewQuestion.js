@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 import { handleAddQuestion } from '../actions/shared'
 
@@ -48,6 +49,9 @@ class NewQuestion extends Component {
 
     return (
       <div className="new-question">
+        <Helmet>
+          <title>Create New Question | Would You Rather?</title>
+        </Helmet>
         <h2 className="new-question__title">Create New Question</h2>
         <form
           className="new-question__form"

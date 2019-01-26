@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import { handleInitialData } from '../actions/shared'
 import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
@@ -20,6 +21,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
+          <Helmet>
+            <title>Would You Rather?</title>
+          </Helmet>
           <LoadingBar style={{ backgroundColor: '#15b394' }} />
           <header className="header">
             <div className="header__inner">
