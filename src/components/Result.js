@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Data from './Data'
+import Data from '../containers/Data'
 
 function Result(props) {
   const { id } = props
