@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import Question from './Question'
+import Question from '../containers/Question'
 
 function QuestionsList(props) {
   return (

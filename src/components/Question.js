@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -31,14 +30,4 @@ Question.propTypes = {
   id: PropTypes.string.isRequired
 }
 
-function mapStateToProps({ users, questions }, { id }) {
-  const question = questions[id]
-  const author = users[question.author]
-
-  return {
-    question,
-    author
-  }
-}
-
-export default connect(mapStateToProps)(Question)
+export default Question
