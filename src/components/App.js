@@ -10,7 +10,7 @@ import Login from './Login'
 import NewQuestion from './NewQuestion'
 import QuestionsList from '../containers/QuestionsList'
 import LeaderBoard from '../containers/LeaderBoard'
-import Poll from './Poll'
+import Poll from '../containers/Poll'
 
 class App extends Component {
   componentDidMount() {
