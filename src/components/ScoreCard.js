@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
 function ScoreCard(props) {
   const answeredQuestions = Object.keys(props.user.answers).length
@@ -42,10 +41,4 @@ ScoreCard.propTypes = {
   user: PropTypes.object.isRequired
 }
 
-function mapStateToProps({ users }, { id }) {
-  return {
-    user: users[id]
-  }
-}
-
-export default connect(mapStateToProps)(ScoreCard)
+export default ScoreCard
