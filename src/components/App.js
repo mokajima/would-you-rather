@@ -9,7 +9,7 @@ import Nav from './Nav'
 import Login from './Login'
 import NewQuestion from './NewQuestion'
 import QuestionsList from '../containers/QuestionsList'
-import LeaderBoard from './LeaderBoard'
+import LeaderBoard from '../containers/LeaderBoard'
 import Poll from './Poll'
 
 class App extends Component {

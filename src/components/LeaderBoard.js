@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import ScoreCard from './ScoreCard'
@@ -21,16 +20,4 @@ LeaderBoard.propTypes = {
   userIds: PropTypes.array.isRequired
 }
 
-function mapStateToProps({ users }) {
-  return {
-    userIds: Object.keys(users)
-      .sort((a, b) => {
-        const scoreA = Object.keys(users[a].answers).length + users[a].questions.length
-        const scoreB = Object.keys(users[b].answers).length + users[b].questions.length
-
-        return scoreB - scoreA
-      })
-  }
-}
-
-export default connect(mapStateToProps)(LeaderBoard)
+export default LeaderBoard
