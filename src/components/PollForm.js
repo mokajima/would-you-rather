@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { handleAnswerQuestion } from '../actions/shared'
 
 class PollForm extends Component {
   state = {
@@ -28,7 +26,10 @@ class PollForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
-    this.props.dispatch(handleAnswerQuestion(this.props.id, this.state.checked))
+    const { id, answerQuestion } = this.props
+    const { checked } = this.state
+
+    answerQuestion(id, checked)
   }
 
   render() {
@@ -74,17 +75,9 @@ class PollForm extends Component {
 }
 
 PollForm.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   id: PropTypes.string.isRequired,
-  question: PropTypes.object.isRequired
+  question: PropTypes.object.isRequired,
+  answerQuestion: PropTypes.func.isRequired
 }
 
-function mapStateToProps({ questions }, { id }) {
-  const question = questions[id]
-
-  return {
-    question
-  }
-}
-
-export default connect(mapStateToProps)(PollForm)
+export default PollForm

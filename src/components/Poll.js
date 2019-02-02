@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Result from './Result'
-import PollForm from './PollForm'
+import PollForm from '../containers/PollForm'
 import logo from '../logo.svg'
 
 function Poll(props) {
