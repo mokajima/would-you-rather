@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Question from './Question'
@@ -31,20 +30,4 @@ QuestionsList.propTypes = {
   answeredQuestions: PropTypes.array.isRequired
 }
 
-function mapStateToProps({ authedUser, users, questions }) {
-  const answers = authedUser ? users[authedUser].answers : {}
-  const questionIds = Object.keys(questions)
-
-  const unansweredQuestions = questionIds.filter((id) => !answers.hasOwnProperty(id))
-    .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
-
-  const answeredQuestions = questionIds.filter((id) => answers.hasOwnProperty(id))
-    .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
-
-  return {
-    unansweredQuestions,
-    answeredQuestions
-  }
-}
-
-export default connect(mapStateToProps)(QuestionsList)
+export default QuestionsList

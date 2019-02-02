@@ -8,7 +8,7 @@ import LoadingBar from 'react-redux-loading'
 import Nav from './Nav'
 import Login from './Login'
 import NewQuestion from './NewQuestion'
-import QuestionsList from './QuestionsList'
+import QuestionsList from '../containers/QuestionsList'
 import LeaderBoard from './LeaderBoard'
 import Poll from './Poll'
 
