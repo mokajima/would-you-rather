@@ -34,7 +34,6 @@ function Nav(props) {
 }
 
 Nav.propTypes = {
-  history: PropTypes.object.isRequired,
   user: PropTypes.oneOfType([
     PropTypes.object.isRequired,
     PropTypes.oneOf([null]).isRequired
