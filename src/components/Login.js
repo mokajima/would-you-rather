@@ -72,7 +72,6 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   users: PropTypes.object.isRequired
 }
 

@@ -79,7 +79,6 @@ class NewQuestion extends Component {
 }
 
 NewQuestion.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 }
 

@@ -34,7 +34,6 @@ function Nav(props) {
 }
 
 Nav.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired,
   user: PropTypes.oneOfType([
     PropTypes.object.isRequired,
