@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
+import PropTypes from 'prop-types'
 
 class NewQuestion extends Component {
   state = {
@@ -75,6 +76,10 @@ class NewQuestion extends Component {
       </div>
     )
   }
+}
+
+NewQuestion.propTypes = {
+  addQuestion: PropTypes.func.isRequired
 }
 
 export default NewQuestion
