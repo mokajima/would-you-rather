@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
-import { handleAddQuestion } from '../actions/shared'
 
 class NewQuestion extends Component {
   state = {
@@ -34,14 +31,7 @@ class NewQuestion extends Component {
 
     const { optionOne, optionTwo } = this.state
 
-    this.props.dispatch(handleAddQuestion(optionOne, optionTwo))
-
-    this.setState({
-      optionOne: '',
-      optionTwo: ''
-    })
-
-    this.props.history.push('/')
+    this.props.addQuestion(optionOne, optionTwo)
   }
 
   render() {
@@ -93,4 +83,4 @@ NewQuestion.propTypes = {
   history: PropTypes.object.isRequired
 }
 
-export default withRouter(connect()(NewQuestion))
+export default NewQuestion
