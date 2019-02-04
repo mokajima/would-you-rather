@@ -37,7 +37,8 @@ Nav.propTypes = {
   user: PropTypes.oneOfType([
     PropTypes.object.isRequired,
     PropTypes.oneOf([null]).isRequired
-  ])
+  ]),
+  removeAuthedUser: PropTypes.func.isRequired
 }
 
 export default Nav
