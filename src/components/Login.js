@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { setAuthedUser } from '../actions/authedUser'
 
 class Login extends Component {
   state = {
@@ -28,8 +26,7 @@ class Login extends Component {
    */
   handleSubmit = (e) => {
     e.preventDefault()
-
-    this.props.dispatch(setAuthedUser(this.state.selected))
+    this.props.setAuthedUser(this.state.selected)
   }
 
   render() {
@@ -79,10 +76,4 @@ Login.propTypes = {
   users: PropTypes.object.isRequired
 }
 
-function mapStateToProps({ users }) {
-  return {
-    users
-  }
-}
-
-export default connect(mapStateToProps)(Login)
+export default Login
