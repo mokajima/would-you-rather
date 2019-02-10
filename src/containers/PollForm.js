@@ -2,20 +2,14 @@ import { connect } from 'react-redux'
 import { handleAnswerQuestion } from '../actions/shared'
 import PollForm from '../components/PollForm'
 
-function mapStateToProps({ questions }, { id }) {
-  const question = questions[id]
+const mapStateToProps = ({ questions }, { id }) => ({
+  question: questions[id]
+})
 
-  return {
-    question
+const mapDispatchToProps = dispatch => ({
+  answerQuestion: (qid, answer) => {
+    dispatch(handleAnswerQuestion(qid, answer))
   }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    answerQuestion: (qid, answer) => {
-      dispatch(handleAnswerQuestion(qid, answer))
-    }
-  }
-}
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(PollForm)

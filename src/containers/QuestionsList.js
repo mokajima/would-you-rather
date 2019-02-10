@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import QuestionsList from '../components/QuestionsList'
 
-function mapStateToProps({ authedUser, users, questions }) {
+const mapStateToProps = ({ authedUser, users, questions }) => {
   const answers = authedUser ? users[authedUser].answers : {}
   const questionIds = Object.keys(questions)
 
