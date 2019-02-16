@@ -5,14 +5,16 @@ import ScoreCard from '../containers/ScoreCard'
 
 function LeaderBoard(props) {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Leader Board | Would You Rather?</title>
       </Helmet>
-      {props.userIds.map((id) => (
-        <ScoreCard id={id} key={id} />
-      ))}
-    </div>
+      <div>
+        {props.userIds.map((id) => (
+          <ScoreCard id={id} key={id} />
+        ))}
+      </div>
+    </>
   )
 }
 

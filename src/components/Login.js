@@ -34,39 +34,41 @@ class Login extends Component {
     const { selected } = this.state
 
     return (
-      <div className="login-form container">
+      <>
         <Helmet>
           <title>Login | Would You Rather?</title>
         </Helmet>
-        <header className="login-form__header">
-          <h2 className="login-form__title">Welcome to the Would You Rather App!</h2>
-          <p className="login-form__desc">Please sign in to continue</p>
-        </header>
-        <form
-          className="login-form__form"
-          onSubmit={this.handleSubmit}
-        >
-          <select
-            className="select"
-            value={selected}
-            onChange={this.handleChange}
+        <div className="login-form container">
+          <header className="login-form__header">
+            <h2 className="login-form__title">Welcome to the Would You Rather App!</h2>
+            <p className="login-form__desc">Please sign in to continue</p>
+          </header>
+          <form
+            className="login-form__form"
+            onSubmit={this.handleSubmit}
           >
-            <option value="">Select User</option>
-            {Object.keys(users).map((id) => (
-              <option key={id} value={id}>
-                {users[id].name}
-              </option>
-            ))}
-          </select>
-          <button
-            type="submit"
-            className="btn"
-            disabled={'' === selected}
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+            <select
+              className="select"
+              value={selected}
+              onChange={this.handleChange}
+            >
+              <option value="">Select User</option>
+              {Object.keys(users).map((id) => (
+                <option key={id} value={id}>
+                  {users[id].name}
+                </option>
+              ))}
+            </select>
+            <button
+              type="submit"
+              className="btn"
+              disabled={'' === selected}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </>
     )
   }
 }

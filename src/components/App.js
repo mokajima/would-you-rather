@@ -19,33 +19,35 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Helmet>
-            <title>Would You Rather?</title>
-          </Helmet>
-          <LoadingBar style={{ backgroundColor: '#15b394' }} />
-          <header className="header">
-            <div className="header__inner">
-              <h1 className="header__title">
-                <Link to="/">Would You Rather...?</Link>
-              </h1>
-              <Nav />
-            </div>
-          </header>
-          {this.props.authedUser
-            ? (
-              <div className="container">
-                <Route path="/" exact component={QuestionsList} />
-                <Route path="/add" component={NewQuestion} />
-                <Route path="/leaderboard" component={LeaderBoard} />
-                <Route path="/questions/:id" component={Poll} />
+      <>
+        <Helmet>
+          <title>Would You Rather?</title>
+        </Helmet>
+        <BrowserRouter>
+          <div>
+            <LoadingBar style={{ backgroundColor: '#15b394' }} />
+            <header className="header">
+              <div className="header__inner">
+                <h1 className="header__title">
+                  <Link to="/">Would You Rather...?</Link>
+                </h1>
+                <Nav />
               </div>
-            )
-            : <Login />
-          }
-        </div>
-      </BrowserRouter>
+            </header>
+            {this.props.authedUser
+              ? (
+                <div className="container">
+                  <Route path="/" exact component={QuestionsList} />
+                  <Route path="/add" component={NewQuestion} />
+                  <Route path="/leaderboard" component={LeaderBoard} />
+                  <Route path="/questions/:id" component={Poll} />
+                </div>
+              )
+              : <Login />
+            }
+          </div>
+        </BrowserRouter>
+      </>
     )
   }
 }
