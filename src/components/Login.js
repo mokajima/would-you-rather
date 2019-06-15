@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet'
 
 class Login extends Component {
   state = {
-    selected: ''
+    user: ''
   }
 
   /**
-   * @description Update this.state.selected
+   * @description Update this.state.user
    * @param {object} e - The event object
    */
   handleChange = (e) => {
@@ -16,7 +16,7 @@ class Login extends Component {
     const value = target.value
 
     this.setState({
-      selected: value
+      user: value
     })
   }
 
@@ -26,12 +26,12 @@ class Login extends Component {
    */
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.setAuthedUser(this.state.selected)
+    this.props.setAuthedUser(this.state.user)
   }
 
   render() {
     const { users } = this.props
-    const { selected } = this.state
+    const { user } = this.state
 
     return (
       <>
@@ -49,7 +49,7 @@ class Login extends Component {
           >
             <select
               className="select"
-              value={selected}
+              value={user}
               onChange={this.handleChange}
             >
               <option value="">Select User</option>
@@ -62,7 +62,7 @@ class Login extends Component {
             <button
               type="submit"
               className="btn"
-              disabled={'' === selected}
+              disabled={'' === user}
             >
               Submit
             </button>
