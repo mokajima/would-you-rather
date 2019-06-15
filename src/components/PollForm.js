@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 
 class PollForm extends Component {
   state = {
-    checked: 'optionOne'
+    answer: 'optionOne'
   }
 
   /**
-   * @description Update this.state.checked
+   * @description Update this.state.answer
    * @param {object} e - The event object
    */
   handleChange = (e) => {
@@ -15,7 +15,7 @@ class PollForm extends Component {
     const value = target.value
 
     this.setState({
-      checked: value
+      answer: value
     })
   }
 
@@ -27,14 +27,14 @@ class PollForm extends Component {
     e.preventDefault()
 
     const { id, answerQuestion } = this.props
-    const { checked } = this.state
+    const { answer } = this.state
 
-    answerQuestion(id, checked)
+    answerQuestion(id, answer)
   }
 
   render() {
     const { question } = this.props
-    const { checked } = this.state
+    const { answer } = this.state
 
     return (
       <form
@@ -47,7 +47,7 @@ class PollForm extends Component {
             type="radio"
             className="radio"
             value="optionOne"
-            checked={'optionOne' === checked}
+            checked={'optionOne' === answer}
             onChange={this.handleChange}
           />
           {question.optionOne.text}
@@ -57,7 +57,7 @@ class PollForm extends Component {
             type="radio"
             className="radio"
             value="optionTwo"
-            checked={'optionTwo' === checked}
+            checked={'optionTwo' === answer}
             onChange={this.handleChange}
           />
           {question.optionTwo.text}
@@ -65,7 +65,7 @@ class PollForm extends Component {
         <button
           type="submit"
           className="btn"
-          disabled={'' === checked}
+          disabled={'' === answer}
         >
           Submit
         </button>
