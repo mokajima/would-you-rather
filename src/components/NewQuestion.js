@@ -1,83 +1,56 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 
-class NewQuestion extends Component {
-  state = {
-    optionOne: '',
-    optionTwo: ''
-  }
+const NewQuestion = ({ addQuestion }) => {
+  const [optionOne, setOptionOne] = useState('')
+  const [optionTwo, setOptionTwo] = useState('')
 
-  /**
-   * @description Update this.state
-   * @param {object} e - The event object
-   */
-  handleChange = (e) => {
-    const target = e.target
-    const value = target.value
-    const name = target.name
-
-    this.setState({
-      [name]: value
-    })
-  }
-
-  /**
-   * @description Dispatch an async action
-   * @param {object} e - The event object
-   */
-  handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
-
-    const { optionOne, optionTwo } = this.state
-
-    this.props.addQuestion(optionOne, optionTwo)
+    addQuestion(optionOne, optionTwo)
   }
 
-  render() {
-    const { optionOne, optionTwo } = this.state
-
-    return (
-      <>
-        <Helmet>
-          <title>Create New Question | Would You Rather?</title>
-        </Helmet>
-        <div className="new-question">
-          <h2 className="new-question__title">Create New Question</h2>
-          <form
-            className="new-question__form"
-            onSubmit={this.handleSubmit}
+  return (
+    <>
+      <Helmet>
+        <title>Create New Question | Would You Rather?</title>
+      </Helmet>
+      <div className="new-question">
+        <h2 className="new-question__title">Create New Question</h2>
+        <form
+          className="new-question__form"
+          onSubmit={handleSubmit}
+        >
+          <p>Would you rather...</p>
+          <input
+            type="text"
+            className="input"
+            name="optionOne"
+            placeholder="Enter Option One Text Here"
+            value={optionOne}
+            onChange={e => setOptionOne(e.target.value)}
+          />
+          <hr />
+          <input
+            type="text"
+            className="input"
+            name="optionTwo"
+            placeholder="Enter Option Two Text Here"
+            value={optionTwo}
+            onChange={e => setOptionTwo(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="new-question__btn btn"
+            disabled={'' === optionOne || '' === optionTwo}
           >
-            <p>Would you rather...</p>
-            <input
-              type="text"
-              className="input"
-              name="optionOne"
-              placeholder="Enter Option One Text Here"
-              value={optionOne}
-              onChange={this.handleChange}
-            />
-            <hr />
-            <input
-              type="text"
-              className="input"
-              name="optionTwo"
-              placeholder="Enter Option Two Text Here"
-              value={optionTwo}
-              onChange={this.handleChange}
-            />
-            <button
-              type="submit"
-              className="new-question__btn btn"
-              disabled={'' === optionOne || '' === optionTwo}
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </>
-    )
-  }
+            Submit
+          </button>
+        </form>
+      </div>
+    </>
+  )
 }
 
 NewQuestion.propTypes = {
