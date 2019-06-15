@@ -4,9 +4,12 @@ import Result from './Result'
 import PollForm from '../containers/PollForm'
 import logo from '../logo.svg'
 
-function Poll(props) {
-  const { question, author, answer, id } = props
-
+const Poll = ({
+  question,
+  author,
+  answer,
+  id
+}) => {
   return question
     ? (
       <div className="card">
@@ -15,7 +18,7 @@ function Poll(props) {
           <div className="card__avatar">
             <img
               className="avatar avatar--lg"
-              src={props.author.avatarURL}
+              src={author.avatarURL}
               alt=""
             />
           </div>

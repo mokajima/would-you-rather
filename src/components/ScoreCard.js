@@ -1,21 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function ScoreCard(props) {
-  const answeredQuestions = Object.keys(props.user.answers).length
-  const createdQuestions = props.user.questions.length
+const ScoreCard = ({ user }) => {
+  const answeredQuestions = Object.keys(user.answers).length
+  const createdQuestions = user.questions.length
 
   return (
     <div className="score-card">
       <div className="score-card__col score-card__avatar">
         <img
           className="avatar avatar--md"
-          src={props.user.avatarURL}
+          src={user.avatarURL}
           alt=""
         />
       </div>
       <div className="score-card__col">
-        <span className="score-card__name">{props.user.name}</span>
+        <span className="score-card__name">{user.name}</span>
         <table className="score-card__table">
           <tbody>
             <tr>

@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Data(props) {
-  const { question, answer, option } = props
-
+const Data = ({
+  question,
+  answer,
+  option
+}) => {
   const className = option === answer
     ? 'result__option option option--selected'
     : 'result__option option'
