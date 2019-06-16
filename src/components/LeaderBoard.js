@@ -9,7 +9,7 @@ const LeaderBoard = ({ userIds }) => (
       <title>Leader Board | Would You Rather?</title>
     </Helmet>
     <div>
-      {userIds.map((id) => (
+      {userIds.map(id => (
         <ScoreCard id={id} key={id} />
       ))}
     </div>

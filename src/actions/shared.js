@@ -5,7 +5,7 @@ import { showLoading, hideLoading } from 'react-redux-loading'
 import { ADD_QUESTION, ANSWER_QUESTION } from './types'
 
 export function handleInitialData() {
-  return (dispatch) => {
+  return dispatch => {
     dispatch(showLoading())
     return Promise.all([
       _getUsers(),
@@ -37,7 +37,7 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
       optionTwoText,
       author: authedUser
     })
-      .then((question) => dispatch(addQuestion(question)))
+      .then(question => dispatch(addQuestion(question)))
       .then(() => dispatch(hideLoading()))
   }
 }

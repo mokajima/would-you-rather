@@ -37,7 +37,7 @@ const Login = ({
             onChange={handleChange}
           >
             <option value="">Select User</option>
-            {Object.keys(users).map((id) => (
+            {Object.keys(users).map(id => (
               <option key={id} value={id}>
                 {users[id].name}
               </option>

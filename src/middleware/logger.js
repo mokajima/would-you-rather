@@ -1,4 +1,4 @@
-const logger = (store) => (next) => (action) => {
+const logger = store => next => action => {
   /* eslint-disable no-console, indent */
   console.group(action.type)
     console.log('The action: ', action)

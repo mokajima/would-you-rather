@@ -5,10 +5,10 @@ const mapStateToProps = ({ authedUser, users, questions }) => {
   const answers = authedUser ? users[authedUser].answers : {}
   const questionIds = Object.keys(questions)
 
-  const unansweredQuestions = questionIds.filter((id) => !answers.hasOwnProperty(id))
+  const unansweredQuestions = questionIds.filter(id => !answers.hasOwnProperty(id))
     .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
 
-  const answeredQuestions = questionIds.filter((id) => answers.hasOwnProperty(id))
+  const answeredQuestions = questionIds.filter(id => answers.hasOwnProperty(id))
     .sort((a, b) => questions[b].timestamp - questions[a].timestamp)
 
   return {

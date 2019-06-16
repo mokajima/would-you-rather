@@ -14,12 +14,12 @@ const QuestionsList = ({
     </TabList>
 
     <TabPanel>
-      {unansweredQuestions.map((id) => (
+      {unansweredQuestions.map(id => (
         <Question id={id} key={id} />
       ))}
     </TabPanel>
     <TabPanel>
-      {answeredQuestions.map((id) => (
+      {answeredQuestions.map(id => (
         <Question id={id} key={id} />
       ))}
     </TabPanel>
