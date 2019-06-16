@@ -1,4 +1,4 @@
-import { SET_AUTHED_USER, REMOVE_AUTHED_USER } from './types'
+import { SET_AUTHED_USER, REMOVE_AUTHED_USER } from './constants'
 
 export function setAuthedUser(id) {
   return {

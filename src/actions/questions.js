@@ -1,4 +1,4 @@
-import { RECEIVE_QUESTIONS } from './types'
+import { RECEIVE_QUESTIONS } from './constants'
 
 export function receiveQuestions(questions) {
   return {
