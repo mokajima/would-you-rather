@@ -2,7 +2,7 @@ import { _getUsers, _getQuestions, _saveQuestion, _saveQuestionAnswer } from '..
 import { receiveUsers } from '../actions/users'
 import { receiveQuestions } from '../actions/questions'
 import { showLoading, hideLoading } from 'react-redux-loading'
-import { ADD_QUESTION, ANSWER_QUESTION } from './constants'
+import * as ActionType from './constants'
 
 export function handleInitialData() {
   return dispatch => {
@@ -21,7 +21,7 @@ export function handleInitialData() {
 
 function addQuestion(question) {
   return {
-    type: ADD_QUESTION,
+    type: ActionType.ADD_QUESTION,
     question
   }
 }
@@ -44,7 +44,7 @@ export function handleAddQuestion(optionOneText, optionTwoText) {
 
 function answerQuestion({ authedUser, qid, answer }) {
   return {
-    type: ANSWER_QUESTION,
+    type: ActionType.ANSWER_QUESTION,
     authedUser,
     qid,
     answer

@@ -1,13 +1,13 @@
-import { RECEIVE_USERS, ADD_QUESTION, ANSWER_QUESTION } from '../actions/constants'
+import * as ActionType from '../actions/constants'
 
 export default function users(state = {}, action) {
   switch (action.type) {
-    case RECEIVE_USERS :
+    case ActionType.RECEIVE_USERS :
       return {
         ...state,
         ...action.users
       }
-    case ADD_QUESTION : {
+    case ActionType.ADD_QUESTION : {
       const { question } = action
 
       return {
@@ -18,7 +18,7 @@ export default function users(state = {}, action) {
         }
       }
     }
-    case ANSWER_QUESTION : {
+    case ActionType.ANSWER_QUESTION : {
       const { authedUser } = action
       return {
         ...state,

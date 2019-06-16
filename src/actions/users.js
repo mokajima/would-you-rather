@@ -1,8 +1,8 @@
-import { RECEIVE_USERS } from './constants'
+import * as ActionType from './constants'
 
 export function receiveUsers(users) {
   return {
-    type: RECEIVE_USERS,
+    type: ActionType.RECEIVE_USERS,
     users
   }
 }

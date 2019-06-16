@@ -1,8 +1,8 @@
-import { RECEIVE_QUESTIONS } from './constants'
+import * as ActionType from './constants'
 
 export function receiveQuestions(questions) {
   return {
-    type: RECEIVE_QUESTIONS,
+    type: ActionType.RECEIVE_QUESTIONS,
     questions
   }
 }
