@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const PollForm = ({
   id,
+  authedUser,
   answerQuestion,
   question
 }) => {
@@ -14,7 +15,11 @@ const PollForm = ({
 
   const handleSubmit = e => {
     e.preventDefault()
-    answerQuestion(id, answer)
+    answerQuestion({
+      authedUser,
+      qid: id,
+      answer
+    })
   }
 
   return (
@@ -57,7 +62,8 @@ const PollForm = ({
 PollForm.propTypes = {
   id: PropTypes.string.isRequired,
   question: PropTypes.object.isRequired,
-  answerQuestion: PropTypes.func.isRequired
+  answerQuestion: PropTypes.func.isRequired,
+  authedUser: PropTypes.string.isRequired
 }
 
 export default PollForm

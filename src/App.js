@@ -3,7 +3,9 @@ import { connect } from 'react-redux'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { handleInitialData } from './actions/shared'
+
+import { getUsers } from './actions/users'
+import { getQuestions } from './actions/questions'
 import LoadingBar from 'react-redux-loading'
 import Nav from './containers/Nav'
 import Login from './containers/Login'
@@ -14,7 +16,8 @@ import Poll from './containers/Poll'
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+    this.props.dispatch(getUsers.start())
+    this.props.dispatch(getQuestions.start())
   }
 
   render() {

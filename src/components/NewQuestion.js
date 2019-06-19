@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
 
-const NewQuestion = ({ addQuestion }) => {
+const NewQuestion = ({ authedUser, addQuestion }) => {
   const [optionOne, setOptionOne] = useState('')
   const [optionTwo, setOptionTwo] = useState('')
 
   const handleSubmit = e => {
     e.preventDefault()
-    addQuestion(optionOne, optionTwo)
+    addQuestion({
+      author: authedUser,
+      optionOneText: optionOne,
+      optionTwoText: optionTwo
+    })
   }
 
   return (
@@ -54,6 +58,7 @@ const NewQuestion = ({ addQuestion }) => {
 }
 
 NewQuestion.propTypes = {
+  authedUser: PropTypes.string.isRequired,
   addQuestion: PropTypes.func.isRequired
 }
 

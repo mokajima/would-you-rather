@@ -1,13 +1,17 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import { handleAddQuestion } from '../actions/shared'
+import { addQuestion } from '../actions/shared'
 import NewQuestion from '../components/NewQuestion'
 
+const mapStateToProps = ({ authedUser }) => ({
+  authedUser
+})
+
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  addQuestion: (optionOne, optionTwo) => {
-    dispatch(handleAddQuestion(optionOne, optionTwo))
+  addQuestion: params => {
+    dispatch(addQuestion.start(params))
     ownProps.history.push('/')
   }
 })
 
-export default withRouter(connect(null, mapDispatchToProps)(NewQuestion))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NewQuestion))

@@ -1,72 +1,25 @@
-import { _getUsers, _getQuestions, _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA'
-import { receiveUsers } from '../actions/users'
-import { receiveQuestions } from '../actions/questions'
-import { showLoading, hideLoading } from 'react-redux-loading'
 import * as ActionType from './constants'
 
-export function handleInitialData() {
-  return dispatch => {
-    dispatch(showLoading())
-    return Promise.all([
-      _getUsers(),
-      _getQuestions()
-    ])
-      .then(([users, questions]) => {
-        dispatch(receiveUsers(users))
-        dispatch(receiveQuestions(questions))
-        dispatch(hideLoading())
-      })
-  }
+export const addQuestion = {
+  start: params => ({
+    type: ActionType.ADD_QUESTION_START,
+    payload: params
+  }),
+
+  succeed: params => ({
+    type: ActionType.ADD_QUESTION_SUCCEED,
+    payload: params
+  })
 }
 
-function addQuestion(question) {
-  return {
-    type: ActionType.ADD_QUESTION,
-    question
-  }
-}
+export const answerQuestion = {
+  start: params => ({
+    type: ActionType.ANSWER_QUESTION_START,
+    payload: params
+  }),
 
-export function handleAddQuestion(optionOneText, optionTwoText) {
-  return (dispatch, getState) => {
-    const { authedUser } = getState()
-
-    dispatch(showLoading())
-
-    return _saveQuestion({
-      optionOneText,
-      optionTwoText,
-      author: authedUser
-    })
-      .then(question => dispatch(addQuestion(question)))
-      .then(() => dispatch(hideLoading()))
-  }
-}
-
-function answerQuestion({ authedUser, qid, answer }) {
-  return {
-    type: ActionType.ANSWER_QUESTION,
-    authedUser,
-    qid,
-    answer
-  }
-}
-
-export function handleAnswerQuestion(qid, answer) {
-  return (dispatch, getState) => {
-    const { authedUser } = getState()
-
-    dispatch(showLoading())
-
-    return _saveQuestionAnswer({
-      authedUser,
-      qid,
-      answer
-    })
-      .then(() => dispatch(answerQuestion({
-        authedUser,
-        qid,
-        answer
-      })))
-      .then(() => dispatch(hideLoading()))
-  }
+  succeed: params => ({
+    type: ActionType.ANSWER_QUESTION_SUCCEED,
+    payload: params
+  })
 }
