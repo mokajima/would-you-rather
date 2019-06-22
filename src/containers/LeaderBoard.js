@@ -1,14 +1,20 @@
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import LeaderBoard from '../components/LeaderBoard'
 
-const mapStateToProps = ({ users }) => ({
-  userIds: Object.keys(users)
+const LeaderBoardContainer = () => {
+  const users = useSelector(state => state.users)
+  const userIds = Object.keys(users)
     .sort((a, b) => {
       const scoreA = Object.keys(users[a].answers).length + users[a].questions.length
       const scoreB = Object.keys(users[b].answers).length + users[b].questions.length
 
       return scoreB - scoreA
     })
-})
 
-export default connect(mapStateToProps)(LeaderBoard)
+  return (
+    <LeaderBoard userIds={userIds} />
+  )
+}
+
+export default LeaderBoardContainer

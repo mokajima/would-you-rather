@@ -1,15 +1,18 @@
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { setAuthedUser } from '../actions/authedUser'
 import Login from '../components/Login'
 
-const mapStateToProps = ({ users }) => ({
-  users
-})
+const LoginContainer = () => {
+  const users = useSelector(state => state.users)
+  const dispatch = useDispatch()
 
-const mapDispatchToProps = dispatch => ({
-  setAuthedUser: id => {
-    dispatch(setAuthedUser(id))
-  }
-})
+  return (
+    <Login
+      users={users}
+      setAuthedUser={id => dispatch(setAuthedUser(id))}
+    />
+  )
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+export default LoginContainer

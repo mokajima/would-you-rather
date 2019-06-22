@@ -1,16 +1,23 @@
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { answerQuestion } from '../actions/shared'
 import PollForm from '../components/PollForm'
 
-const mapStateToProps = ({ authedUser, questions }, { id }) => ({
-  authedUser,
-  question: questions[id]
-})
+const PollFormContainer = ({ id }) => {
+  const authedUser = useSelector(state => state.authedUser)
+  const questions = useSelector(state => state.questions)
+  const dispatch = useDispatch()
 
-const mapDispatchToProps = dispatch => ({
-  answerQuestion: params => {
-    dispatch(answerQuestion.start(params))
-  }
-})
+  const question = questions[id]
 
-export default connect(mapStateToProps, mapDispatchToProps)(PollForm)
+  return (
+    <PollForm
+      authedUser={authedUser}
+      question={question}
+      answerQuestion={params => dispatch(answerQuestion.start(params))}
+      id={id}
+    />
+  )
+}
+
+export default PollFormContainer
