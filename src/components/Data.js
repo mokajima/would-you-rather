@@ -3,15 +3,12 @@ import PropTypes from 'prop-types'
 
 const Data = ({
   question,
-  answer,
-  option
+  option,
+  selected,
+  total,
+  rate
 }) => {
-  const className = option === answer
-    ? 'result__option option option--selected'
-    : 'result__option option'
-
-  const total = question.optionOne.votes.length + question.optionTwo.votes.length
-  const rate = 100 * question[option].votes.length / total
+  const className = selected ? 'result__option option option--selected' : 'result__option option'
 
   return (
     <div className={className}>
@@ -20,7 +17,7 @@ const Data = ({
         <span className="chart__bar" style={{ width: rate + '%' }}></span>
         <span className="chart__text">{rate.toFixed(0)}%</span>
       </div>
-      {option === answer
+      {selected
         ? <p className="center">{question[option].votes.length} out of {total} votes (Your vote)</p>
         : <p className="center">{question[option].votes.length} out of {total} votes</p>
       }
@@ -30,8 +27,10 @@ const Data = ({
 
 Data.propTypes = {
   question: PropTypes.object.isRequired,
-  answer: PropTypes.string.isRequired,
-  option: PropTypes.string.isRequired
+  option: PropTypes.string.isRequired,
+  selected: PropTypes.bool.isRequired,
+  total: PropTypes.number.isRequired,
+  rate: PropTypes.number.isRequired
 }
 
 export default Data
