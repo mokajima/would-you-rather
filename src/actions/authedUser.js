@@ -1,9 +1,9 @@
 import * as ActionType from './constants'
 
-export function setAuthedUser(id) {
+export function setAuthedUser(params) {
   return {
     type: ActionType.SET_AUTHED_USER,
-    id
+    payload: params
   }
 }
 

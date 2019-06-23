@@ -10,7 +10,7 @@ const LoginContainer = () => {
   return (
     <Login
       users={users}
-      setAuthedUser={id => dispatch(setAuthedUser(id))}
+      setAuthedUser={params => dispatch(setAuthedUser(params))}
     />
   )
 }

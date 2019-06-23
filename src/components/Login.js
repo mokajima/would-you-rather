@@ -15,7 +15,7 @@ const Login = ({
 
   const handleSubmit = e => {
     e.preventDefault()
-    setAuthedUser(user)
+    setAuthedUser({ id: user })
   }
 
   return (
