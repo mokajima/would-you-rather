@@ -4,7 +4,6 @@ import './PollForm.css'
 
 const PollForm = ({
   id,
-  authedUser,
   answerQuestion,
   question
 }) => {
@@ -17,7 +16,6 @@ const PollForm = ({
   const handleSubmit = e => {
     e.preventDefault()
     answerQuestion({
-      authedUser,
       qid: id,
       answer
     })
@@ -63,8 +61,7 @@ const PollForm = ({
 PollForm.propTypes = {
   id: PropTypes.string.isRequired,
   question: PropTypes.object.isRequired,
-  answerQuestion: PropTypes.func.isRequired,
-  authedUser: PropTypes.string.isRequired
+  answerQuestion: PropTypes.func.isRequired
 }
 
 export default PollForm

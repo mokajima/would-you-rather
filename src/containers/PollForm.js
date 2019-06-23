@@ -12,9 +12,8 @@ const PollFormContainer = ({ id }) => {
 
   return (
     <PollForm
-      authedUser={authedUser}
       question={question}
-      answerQuestion={params => dispatch(answerQuestion.start(params))}
+      answerQuestion={params => dispatch(answerQuestion.start({ authedUser, ...params }))}
       id={id}
     />
   )
