@@ -1,0 +1,22 @@
+.label {
+  display: block;
+}
+
+.radio {
+  margin-right: 0.5em;
+}
+
+.poll-form {
+  width: 100%;
+}
+
+.poll-form__title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 1em;
+}
+
+.poll-form label {
+  display: block;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,13 @@
+.result {
+  width: 100%;
+}
+
+.result__title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 0.5em;
+}
+
+.result__option:first-of-type {
+  margin-bottom: 20px;
+}

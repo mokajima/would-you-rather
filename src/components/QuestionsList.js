@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import Question from '../containers/Question'
+import './QuestionsList.css'
 
 const QuestionsList = ({
   unansweredQuestions,

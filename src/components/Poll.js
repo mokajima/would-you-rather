@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Result from './Result'
 import PollForm from '../containers/PollForm'
 import logo from '../logo.svg'
+import './Poll.css'
 
 const Poll = ({
   question,

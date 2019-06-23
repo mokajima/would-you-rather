@@ -13,6 +13,7 @@ import NewQuestion from './containers/NewQuestion'
 import QuestionsList from './containers/QuestionsList'
 import LeaderBoard from './containers/LeaderBoard'
 import Poll from './containers/Poll'
+import './App.css'
 
 const App = ({ authedUser }) => (
   <>

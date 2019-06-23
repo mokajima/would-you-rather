@@ -1,0 +1,44 @@
+.option {
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 20px 40px;
+}
+
+.option--selected {
+  background: #fbefd0;
+  border-color: #f2cd73;
+}
+
+.option p {
+  font-weight: 700;
+  margin: 0;
+}
+
+.chart {
+  background: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  text-align: right;
+  margin: 10px 0;
+}
+
+.chart__bar {
+  background: #15b394;
+  border-radius: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chart__text {
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+}
+

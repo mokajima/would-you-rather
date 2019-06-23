@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import PropTypes from 'prop-types'
+import './NewQuestion.css'
 
 const NewQuestion = ({ authedUser, addQuestion }) => {
   const [optionOne, setOptionOne] = useState('')

@@ -1,0 +1,12 @@
+.question {
+  width: 100%;
+}
+
+.question__title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.question__excerpt {
+  color: #666;
+}

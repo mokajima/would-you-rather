@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Data from '../containers/Data'
+import './Result.css'
 
 const Result = ({ id }) => (
   <div className="result">

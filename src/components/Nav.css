@@ -1,0 +1,27 @@
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list-item {
+  color: #333;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav__list-item--logout {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav__list-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav__list-item--logout:hover,
+.nav__list-item a:hover,
+.nav__list-item .active {
+  color: #15b394;
+}

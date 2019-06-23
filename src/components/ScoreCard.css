@@ -1,0 +1,105 @@
+.score-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.score-card::before {
+  content: "";
+  border-style: solid;
+  border-color: #f4f4f4 transparent transparent transparent;
+  border-width: 50px 50px 0 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.score-card::after {
+  counter-increment: number 1;
+  content: counter(number);
+  color: #333;
+  padding: 2.5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.score-card__col:not(:last-child) {
+  border-right: 1px solid #ddd;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.score-card__col:nth-child(2) {
+  flex: 1;
+}
+
+.score-card__avatar {
+  display: flex;
+  align-items: center;
+}
+
+.score-card__name {
+  display: block;
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.score-card__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.score-card__table th,
+.score-card__table td {
+  padding: 10px 0;
+}
+
+.score-card__table tr:first-child th,
+.score-card__table tr:first-child td {
+  border-bottom: 1px solid #ddd;
+}
+
+.score-card__table th {
+  text-align: left;
+  font-weight: 400;
+}
+
+.score-card__table td {
+  text-align: center;
+}
+
+.score {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.score__title {
+  background: #f4f4f4;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.score__data {
+  background: #15b394;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 15px 30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
