@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
 import { _getUsers } from '../utils/_DATA'
@@ -13,5 +13,5 @@ export function* runGetUsers() {
 }
 
 export function* watchGetUsers() {
-  yield takeEvery(ActionType.GET_USERS_START, runGetUsers)
+  yield takeLatest(ActionType.GET_USERS_START, runGetUsers)
 }

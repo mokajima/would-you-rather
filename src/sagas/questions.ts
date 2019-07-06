@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
 import { _getQuestions } from '../utils/_DATA'
@@ -13,5 +13,5 @@ export function* runGetQuestions() {
 }
 
 export function* watchGetQuestions() {
-  yield takeEvery(ActionType.GET_QUESTIONS_START, runGetQuestions)
+  yield takeLatest(ActionType.GET_QUESTIONS_START, runGetQuestions)
 }

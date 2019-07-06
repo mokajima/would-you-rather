@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
 import { _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA'
@@ -13,7 +13,7 @@ export function* runAddQuestion(action: ReturnType<typeof addQuestion.start>) {
 }
 
 export function* watchAddQuestion() {
-  yield takeEvery(ActionType.ADD_QUESTION_START, runAddQuestion)
+  yield takeLatest(ActionType.ADD_QUESTION_START, runAddQuestion)
 }
 
 export function* runAnswerQuestion(action: ReturnType<typeof answerQuestion.start>) {
@@ -24,5 +24,5 @@ export function* runAnswerQuestion(action: ReturnType<typeof answerQuestion.star
 }
 
 export function* watchAnswerQuestion() {
-  yield takeEvery(ActionType.ANSWER_QUESTION_START, runAnswerQuestion)
+  yield takeLatest(ActionType.ANSWER_QUESTION_START, runAnswerQuestion)
 }
