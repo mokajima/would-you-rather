@@ -6,10 +6,13 @@ import * as ActionType from '../actions/constants'
 import { getUsers } from '../actions/users'
 
 export function* runGetUsers() {
-  yield put(showLoading())
-  const users = yield call(_getUsers)
-  yield put(getUsers.succeed({ users }))
-  yield put(hideLoading())
+  try {
+    yield put(showLoading())
+    const users = yield call(_getUsers)
+    yield put(getUsers.succeed({ users }))
+  } finally {
+    yield put(hideLoading())
+  }
 }
 
 export function* watchGetUsers() {
