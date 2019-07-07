@@ -1,10 +1,10 @@
 import * as ActionType from './constants'
 
-interface setAuthedUserParams {
+interface SetAuthedUserParams {
   id: string
 }
 
-export function setAuthedUser(params: setAuthedUserParams) {
+export function setAuthedUser(params: SetAuthedUserParams) {
   return {
     type: ActionType.SET_AUTHED_USER as typeof ActionType.SET_AUTHED_USER,
     payload: params
