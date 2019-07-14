@@ -154,12 +154,14 @@ const generateUID = () => {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
 
+// eslint-disable-next-line no-underscore-dangle
 export const _getUsers = () => {
   return new Promise(res => {
     setTimeout(() => res({...users}), 1000)
   })
 }
 
+// eslint-disable-next-line no-underscore-dangle
 export const _getQuestions = () => {
   return new Promise(res => {
     setTimeout(() => res({...questions}), 1000)
@@ -194,6 +196,7 @@ interface SaveQuestionParams {
   question: Question
 }
 
+// eslint-disable-next-line no-underscore-dangle
 export const _saveQuestion = (params: SaveQuestionParams) => {
   const { question } = params
 
@@ -223,6 +226,7 @@ interface SaveQuestionAnswerParams {
   answer: Answer
 }
 
+// eslint-disable-next-line no-underscore-dangle
 export const _saveQuestionAnswer = (params: SaveQuestionAnswerParams) => {
   const { authedUser, qid, answer } = params
 
