@@ -18,7 +18,6 @@ import './App.css'
 const App: FC<{}> = () => {
   const authedUser = useSelector((state: State) => state.authedUser)
   const dispatch = useDispatch()
-  useSelector((state: State) => { console.log('state', state) })
 
   useEffect(() => {
     dispatch(getUsers.start())
