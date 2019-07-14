@@ -41,8 +41,8 @@ let users: Users = {
     answers: {
       '8xf0y6ziyjabvozdd253nd': 'optionOne',
       '6ni6ok3ym7mf1p33lnez': 'optionOne',
-      'am8ehyc8byjqgar0jgpub9': 'optionTwo',
-      'loxhs1bqm25b708cmbf3g': 'optionTwo'
+      am8ehyc8byjqgar0jgpub9: 'optionTwo',
+      loxhs1bqm25b708cmbf3g: 'optionTwo'
     },
     questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
   },
@@ -51,8 +51,8 @@ let users: Users = {
     name: 'Tyler McGinnis',
     avatarURL: '/static/tylermcginnis.png',
     answers: {
-      'vthrdm985a262al8qx3do': 'optionOne',
-      'xj352vofupe1dqz9emx13r': 'optionTwo'
+      vthrdm985a262al8qx3do: 'optionOne',
+      xj352vofupe1dqz9emx13r: 'optionTwo'
     },
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do']
   },
@@ -61,8 +61,8 @@ let users: Users = {
     name: 'John Doe',
     avatarURL: '/static/johndoe.png',
     answers: {
-      'xj352vofupe1dqz9emx13r': 'optionOne',
-      'vthrdm985a262al8qx3do': 'optionTwo',
+      xj352vofupe1dqz9emx13r: 'optionOne',
+      vthrdm985a262al8qx3do: 'optionTwo',
       '6ni6ok3ym7mf1p33lnez': 'optionOne'
     },
     questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r']
@@ -96,7 +96,7 @@ let questions: Questions = {
       text: 'become a supervillian'
     }
   },
-  'am8ehyc8byjqgar0jgpub9': {
+  am8ehyc8byjqgar0jgpub9: {
     id: 'am8ehyc8byjqgar0jgpub9',
     author: 'sarahedo',
     timestamp: 1488579767190,
@@ -109,7 +109,7 @@ let questions: Questions = {
       text: 'be telepathic'
     }
   },
-  'loxhs1bqm25b708cmbf3g': {
+  loxhs1bqm25b708cmbf3g: {
     id: 'loxhs1bqm25b708cmbf3g',
     author: 'tylermcginnis',
     timestamp: 1482579767190,
@@ -122,7 +122,7 @@ let questions: Questions = {
       text: 'be a back-end developer'
     }
   },
-  'vthrdm985a262al8qx3do': {
+  vthrdm985a262al8qx3do: {
     id: 'vthrdm985a262al8qx3do',
     author: 'tylermcginnis',
     timestamp: 1489579767190,
@@ -135,7 +135,7 @@ let questions: Questions = {
       text: 'have your best friend find $500'
     }
   },
-  'xj352vofupe1dqz9emx13r': {
+  xj352vofupe1dqz9emx13r: {
     id: 'xj352vofupe1dqz9emx13r',
     author: 'johndoe',
     timestamp: 1493579767190,
