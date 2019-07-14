@@ -157,14 +157,14 @@ const generateUID = () => {
 // eslint-disable-next-line no-underscore-dangle
 export const _getUsers = () => {
   return new Promise(res => {
-    setTimeout(() => res({...users}), 1000)
+    setTimeout(() => res({ ...users }), 1000)
   })
 }
 
 // eslint-disable-next-line no-underscore-dangle
 export const _getQuestions = () => {
   return new Promise(res => {
-    setTimeout(() => res({...questions}), 1000)
+    setTimeout(() => res({ ...questions }), 1000)
   })
 }
 
