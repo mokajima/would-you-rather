@@ -150,17 +150,17 @@ let questions: Questions = {
   }
 }
 
-function generateUID () {
+const generateUID = () => {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 }
 
-export function _getUsers () {
+export const _getUsers = () => {
   return new Promise(res => {
     setTimeout(() => res({...users}), 1000)
   })
 }
 
-export function _getQuestions () {
+export const _getQuestions = () => {
   return new Promise(res => {
     setTimeout(() => res({...questions}), 1000)
   })
@@ -172,7 +172,7 @@ interface FormatQuestionParams {
   optionTwoText: Option['text']
 }
 
-export function formatQuestion (params: FormatQuestionParams): Question {
+export const formatQuestion = (params: FormatQuestionParams): Question => {
   const { author, optionOneText, optionTwoText } = params
 
   return {
@@ -194,7 +194,7 @@ interface SaveQuestionParams {
   question: Question
 }
 
-export function _saveQuestion (params: SaveQuestionParams) {
+export const _saveQuestion = (params: SaveQuestionParams) => {
   const { question } = params
 
   return new Promise(res => {
@@ -223,7 +223,7 @@ interface SaveQuestionAnswerParams {
   answer: Answer
 }
 
-export function _saveQuestionAnswer (params: SaveQuestionAnswerParams) {
+export const _saveQuestionAnswer = (params: SaveQuestionAnswerParams) => {
   const { authedUser, qid, answer } = params
 
   return new Promise(res => {
