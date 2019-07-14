@@ -14,12 +14,12 @@ const composeEnhancers =
   typeof window === 'object' &&
   (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
-    : compose;
+    : compose
 /* eslint-enable */
 
 const sagaMiddleware = createSagaMiddleware()
 const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware))
-const store = createStore(reducer, enhancer);
+const store = createStore(reducer, enhancer)
 
 sagaMiddleware.run(rootSaga)
 
