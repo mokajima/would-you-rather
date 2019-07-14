@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
+import { loadingBarReducer } from 'react-redux-loading'
 import authedUser, { AuthedUserState } from './authedUser'
 import users, { UsersState } from './users'
 import questions, { QuestionsState } from './questions'
-import { loadingBarReducer } from 'react-redux-loading'
 
 interface LoadingBarState {
   default: number
