@@ -52,9 +52,9 @@ let users: Users = {
     avatarURL: '/static/tylermcginnis.png',
     answers: {
       'vthrdm985a262al8qx3do': 'optionOne',
-      'xj352vofupe1dqz9emx13r': 'optionTwo',
+      'xj352vofupe1dqz9emx13r': 'optionTwo'
     },
-    questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
+    questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do']
   },
   johndoe: {
     id: 'johndoe',
@@ -65,7 +65,7 @@ let users: Users = {
       'vthrdm985a262al8qx3do': 'optionTwo',
       '6ni6ok3ym7mf1p33lnez': 'optionOne'
     },
-    questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
+    questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r']
   }
 }
 
@@ -76,7 +76,7 @@ let questions: Questions = {
     timestamp: 1467166872634,
     optionOne: {
       votes: ['sarahedo'],
-      text: 'have horrible short term memory',
+      text: 'have horrible short term memory'
     },
     optionTwo: {
       votes: [],
@@ -89,7 +89,7 @@ let questions: Questions = {
     timestamp: 1468479767190,
     optionOne: {
       votes: [],
-      text: 'become a superhero',
+      text: 'become a superhero'
     },
     optionTwo: {
       votes: ['johndoe', 'sarahedo'],
@@ -102,7 +102,7 @@ let questions: Questions = {
     timestamp: 1488579767190,
     optionOne: {
       votes: [],
-      text: 'be telekinetic',
+      text: 'be telekinetic'
     },
     optionTwo: {
       votes: ['sarahedo'],
@@ -115,7 +115,7 @@ let questions: Questions = {
     timestamp: 1482579767190,
     optionOne: {
       votes: [],
-      text: 'be a front-end developer',
+      text: 'be a front-end developer'
     },
     optionTwo: {
       votes: ['sarahedo'],
@@ -128,7 +128,7 @@ let questions: Questions = {
     timestamp: 1489579767190,
     optionOne: {
       votes: ['tylermcginnis'],
-      text: 'find $50 yourself',
+      text: 'find $50 yourself'
     },
     optionTwo: {
       votes: ['johndoe'],
@@ -141,13 +141,13 @@ let questions: Questions = {
     timestamp: 1493579767190,
     optionOne: {
       votes: ['johndoe'],
-      text: 'write JavaScript',
+      text: 'write JavaScript'
     },
     optionTwo: {
       votes: ['tylermcginnis'],
       text: 'write Swift'
     }
-  },
+  }
 }
 
 function generateUID () {
@@ -181,11 +181,11 @@ export function formatQuestion (params: FormatQuestionParams): Question {
     author,
     optionOne: {
       votes: [],
-      text: optionOneText,
+      text: optionOneText
     },
     optionTwo: {
       votes: [],
-      text: optionTwoText,
+      text: optionTwoText
     }
   }
 }
