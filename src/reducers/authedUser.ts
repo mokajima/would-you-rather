@@ -6,11 +6,11 @@ export type AuthedUserState = User['id']
 
 export default function authedUser(state: AuthedUserState = '', action: authedUserAction) {
   switch (action.type) {
-    case ActionType.SET_AUTHED_USER :
+    case ActionType.SET_AUTHED_USER:
       return action.payload.id
-    case ActionType.REMOVE_AUTHED_USER :
+    case ActionType.REMOVE_AUTHED_USER:
       return ''
-    default :
+    default:
       return state
   }
 }

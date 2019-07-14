@@ -12,12 +12,12 @@ type UsersAction =
 
 export default function users(state: UsersState = {}, action: UsersAction) {
   switch (action.type) {
-    case ActionType.GET_USERS_SUCCEED :
+    case ActionType.GET_USERS_SUCCEED:
       return {
         ...state,
         ...action.payload.users
       }
-    case ActionType.ADD_QUESTION_SUCCEED : {
+    case ActionType.ADD_QUESTION_SUCCEED: {
       const { question } = action.payload
 
       return {
@@ -28,7 +28,7 @@ export default function users(state: UsersState = {}, action: UsersAction) {
         }
       }
     }
-    case ActionType.ANSWER_QUESTION_SUCCEED : {
+    case ActionType.ANSWER_QUESTION_SUCCEED: {
       const { authedUser, qid, answer } = action.payload
 
       return {
@@ -42,7 +42,7 @@ export default function users(state: UsersState = {}, action: UsersAction) {
         }
       }
     }
-    default :
+    default:
       return state
   }
 }
