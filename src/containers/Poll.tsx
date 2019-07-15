@@ -8,7 +8,7 @@ import Poll from '../components/Poll'
 type PollContainerProps = {} & RouteComponentProps<{ id: Question['id'] }>
 
 const PollContainer: FC<PollContainerProps> = ({ match }) => {
-  const id = match.params.id
+  const { id } = match.params
   const authedUser = useSelector((state: State) => state.authedUser)
   const users = useSelector((state: State) => state.users)
   const questions = useSelector((state: State) => state.questions)
