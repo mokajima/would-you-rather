@@ -22,8 +22,9 @@ const PollForm: FC<PollFormProps> = ({ answerQuestion, question }) => {
   return (
     <form className="poll-form" onSubmit={handleSubmit}>
       <p className="poll-form__title">Would You Rather...</p>
-      <label className="label">
+      <label className="label" htmlFor="optionOne">
         <input
+          id="optionOne"
           type="radio"
           className="radio"
           value="optionOne"
@@ -32,8 +33,9 @@ const PollForm: FC<PollFormProps> = ({ answerQuestion, question }) => {
         />
         {question.optionOne.text}
       </label>
-      <label className="label">
+      <label className="label" htmlFor="optionTwo">
         <input
+          id="optonTwo"
           type="radio"
           className="radio"
           value="optionTwo"
