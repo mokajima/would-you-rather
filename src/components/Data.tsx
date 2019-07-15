@@ -23,7 +23,7 @@ const Data: FC<DataProps> = ({
     <div className={className}>
       <p>Would you rather {question[option].text}?</p>
       <div className="chart">
-        <span className="chart__bar" style={{ width: rate + '%' }}></span>
+        <span className="chart__bar" style={{ width: rate + '%' }} />
         <span className="chart__text">{rate.toFixed(0)}%</span>
       </div>
       {selected
