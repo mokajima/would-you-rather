@@ -8,10 +8,7 @@ interface LoginProps {
   setAuthedUser: (id: User['id']) => void
 }
 
-const Login: FC<LoginProps> = ({
-  users,
-  setAuthedUser
-}) => {
+const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
   const [user, setUser] = useState('')
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -30,18 +27,13 @@ const Login: FC<LoginProps> = ({
       </Helmet>
       <div className="login-form container">
         <header className="login-form__header">
-          <h2 className="login-form__title">Welcome to the Would You Rather App!</h2>
+          <h2 className="login-form__title">
+            Welcome to the Would You Rather App!
+          </h2>
           <p className="login-form__desc">Please sign in to continue</p>
         </header>
-        <form
-          className="login-form__form"
-          onSubmit={handleSubmit}
-        >
-          <select
-            className="select"
-            value={user}
-            onChange={handleChange}
-          >
+        <form className="login-form__form" onSubmit={handleSubmit}>
+          <select className="select" value={user} onChange={handleChange}>
             <option value="">Select User</option>
             {Object.keys(users).map(id => (
               <option key={id} value={id}>
@@ -49,11 +41,7 @@ const Login: FC<LoginProps> = ({
               </option>
             ))}
           </select>
-          <button
-            type="submit"
-            className="btn"
-            disabled={user === ''}
-          >
+          <button type="submit" className="btn" disabled={user === ''}>
             Submit
           </button>
         </form>

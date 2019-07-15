@@ -15,8 +15,16 @@ const NewQuestionContainer: FC<NewQuestionContainerProps> = ({ history }) => {
   return (
     <NewQuestion
       authedUser={authedUser}
-      addQuestion={(author: User['id'], optionOneText: Option['text'], optionTwoText: Option['text']) => {
-        const question = formatQuestion({ author, optionOneText, optionTwoText })
+      addQuestion={(
+        author: User['id'],
+        optionOneText: Option['text'],
+        optionTwoText: Option['text']
+      ) => {
+        const question = formatQuestion({
+          author,
+          optionOneText,
+          optionTwoText
+        })
         dispatch(addQuestion.start({ question }))
         history.push('/')
       }}

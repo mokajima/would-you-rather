@@ -151,7 +151,14 @@ let questions: Questions = {
 }
 
 const generateUID = () => {
-  return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
+  return (
+    Math.random()
+      .toString(36)
+      .substring(2, 15) +
+    Math.random()
+      .toString(36)
+      .substring(2, 15)
+  )
 }
 
 // eslint-disable-next-line no-underscore-dangle

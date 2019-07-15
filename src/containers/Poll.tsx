@@ -17,13 +17,7 @@ const PollContainer: FC<PollContainerProps> = ({ match }) => {
   const author = question ? users[question.author] : null
   const answer = authedUser ? users[authedUser].answers[id] : null
 
-  return (
-    <Poll
-      question={question}
-      author={author}
-      answer={answer}
-    />
-  )
+  return <Poll question={question} author={author} answer={answer} />
 }
 
 export default withRouter(PollContainer)

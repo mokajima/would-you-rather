@@ -17,11 +17,7 @@ const ScoreCard: FC<ScoreCardProps> = ({
 }) => (
   <div className="score-card">
     <div className="score-card__col score-card__avatar">
-      <img
-        className="avatar avatar--md"
-        src={user.avatarURL}
-        alt=""
-      />
+      <img className="avatar avatar--md" src={user.avatarURL} alt="" />
     </div>
     <div className="score-card__col">
       <span className="score-card__name">{user.name}</span>

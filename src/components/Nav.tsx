@@ -8,10 +8,7 @@ interface NavProps {
   removeAuthedUser: () => void
 }
 
-const Nav: FC<NavProps> = ({
-  user,
-  removeAuthedUser
-}) => (
+const Nav: FC<NavProps> = ({ user, removeAuthedUser }) => (
   <>
     {user && (
       <>
@@ -25,13 +22,15 @@ const Nav: FC<NavProps> = ({
             </li>
             <li
               className="nav__list-item nav__list-item--logout"
-              onClick={removeAuthedUser}>
+              onClick={removeAuthedUser}
+            >
               Logout
             </li>
           </ul>
         </nav>
         <p>
-          Hello, {user.name} <img className="avatar avatar--sm" src={user.avatarURL} alt="" />
+          Hello, {user.name}{' '}
+          <img className="avatar avatar--sm" src={user.avatarURL} alt="" />
         </p>
       </>
     )}

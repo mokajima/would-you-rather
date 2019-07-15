@@ -19,7 +19,9 @@ export function* watchAddQuestion() {
   yield takeLatest(ActionType.ADD_QUESTION_START, runAddQuestion)
 }
 
-export function* runAnswerQuestion(action: ReturnType<typeof answerQuestion.start>) {
+export function* runAnswerQuestion(
+  action: ReturnType<typeof answerQuestion.start>
+) {
   try {
     yield put(showLoading())
     yield call(_saveQuestionAnswer, action.payload)

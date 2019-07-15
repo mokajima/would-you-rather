@@ -7,10 +7,7 @@ interface PollFormProps {
   answerQuestion: (qid: Question['id'], answer: Answer) => void
 }
 
-const PollForm: FC<PollFormProps> = ({
-  answerQuestion,
-  question
-}) => {
+const PollForm: FC<PollFormProps> = ({ answerQuestion, question }) => {
   const [answer, setAnswer] = useState<Answer>('optionOne')
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -23,10 +20,7 @@ const PollForm: FC<PollFormProps> = ({
   }
 
   return (
-    <form
-      className="poll-form"
-      onSubmit={handleSubmit}
-    >
+    <form className="poll-form" onSubmit={handleSubmit}>
       <p className="poll-form__title">Would You Rather...</p>
       <label className="label">
         <input
@@ -48,10 +42,7 @@ const PollForm: FC<PollFormProps> = ({
         />
         {question.optionTwo.text}
       </label>
-      <button
-        type="submit"
-        className="btn"
-      >
+      <button type="submit" className="btn">
         Submit
       </button>
     </form>

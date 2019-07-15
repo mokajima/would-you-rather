@@ -9,10 +9,7 @@ interface DataContainerProps {
   option: Answer
 }
 
-const DataContainer: FC<DataContainerProps> = ({
-  id,
-  option
-}) => {
+const DataContainer: FC<DataContainerProps> = ({ id, option }) => {
   const authedUser = useSelector((state: State) => state.authedUser)
   const questions = useSelector((state: State) => state.questions)
   const users = useSelector((state: State) => state.users)
@@ -20,8 +17,9 @@ const DataContainer: FC<DataContainerProps> = ({
   const question = questions[id]
   const answer = users[authedUser].answers[id]
   const selected = option === answer
-  const total = question.optionOne.votes.length + question.optionTwo.votes.length
-  const rate = 100 * question[option].votes.length / total
+  const total =
+    question.optionOne.votes.length + question.optionTwo.votes.length
+  const rate = (100 * question[option].votes.length) / total
 
   return (
     <Data

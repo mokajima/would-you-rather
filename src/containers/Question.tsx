@@ -15,11 +15,6 @@ const QuestionContainer: FC<QuestionContainerProps> = ({ id }) => {
   const question = questions[id]
   const author = users[question.author]
 
-  return (
-    <Question
-      question={question}
-      author={author}
-    />
-  )
+  return <Question question={question} author={author} />
 }
 export default QuestionContainer

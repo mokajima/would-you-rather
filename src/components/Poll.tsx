@@ -11,43 +11,28 @@ interface PollProps {
   answer: Answer | null
 }
 
-const Poll: FC<PollProps> = ({
-  question,
-  author,
-  answer
-}) => {
+const Poll: FC<PollProps> = ({ question, author, answer }) => {
   if (!question) {
     return (
       <div>
         <div className="logo">
           <img src={logo} alt="" />
         </div>
-        <p className="center">
-          Oops, the page cannot be found.
-        </p>
+        <p className="center">Oops, the page cannot be found.</p>
       </div>
     )
   }
 
   return (
     <div className="card">
-      {author && (
-        <p className="card__title">{author.name} asks:</p>
-      )}
+      {author && <p className="card__title">{author.name} asks:</p>}
       <div className="card__content">
         <div className="card__avatar">
           {author && (
-            <img
-              className="avatar avatar--lg"
-              src={author.avatarURL}
-              alt=""
-            />
+            <img className="avatar avatar--lg" src={author.avatarURL} alt="" />
           )}
         </div>
-        {answer
-          ? <Result id={question.id} />
-          : <PollForm id={question.id} / >
-        }
+        {answer ? <Result id={question.id} /> : <PollForm id={question.id} />}
       </div>
     </div>
   )

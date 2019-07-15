@@ -40,17 +40,16 @@ const App: FC<{}> = () => {
               <Nav />
             </div>
           </header>
-          {authedUser
-            ? (
-              <div className="container">
-                <Route path="/" exact component={QuestionsList} />
-                <Route path="/add" component={NewQuestion} />
-                <Route path="/leaderboard" component={LeaderBoard} />
-                <Route path="/questions/:id" component={Poll} />
-              </div>
-            )
-            : <Login />
-          }
+          {authedUser ? (
+            <div className="container">
+              <Route path="/" exact component={QuestionsList} />
+              <Route path="/add" component={NewQuestion} />
+              <Route path="/leaderboard" component={LeaderBoard} />
+              <Route path="/questions/:id" component={Poll} />
+            </div>
+          ) : (
+            <Login />
+          )}
         </div>
       </BrowserRouter>
     </>

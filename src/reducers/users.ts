@@ -5,10 +5,7 @@ import { GetUsersAction } from '../actions/users'
 
 export type UsersState = Users
 
-type UsersAction =
-  | AddQuestionAction
-  | AnswerQuestionAction
-  | GetUsersAction
+type UsersAction = AddQuestionAction | AnswerQuestionAction | GetUsersAction
 
 export default function users(state: UsersState = {}, action: UsersAction) {
   switch (action.type) {

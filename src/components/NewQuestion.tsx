@@ -5,13 +5,14 @@ import './NewQuestion.css'
 
 interface NewQuestionProps {
   authedUser: User['id']
-  addQuestion: (author: User['id'], optionOneText: Option['text'], optionTwoText: Option['text']) => void
+  addQuestion: (
+    author: User['id'],
+    optionOneText: Option['text'],
+    optionTwoText: Option['text']
+  ) => void
 }
 
-const NewQuestion: FC<NewQuestionProps> = ({
-  authedUser,
-  addQuestion
-}) => {
+const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
   const [optionOne, setOptionOne] = useState('')
   const [optionTwo, setOptionTwo] = useState('')
 
@@ -27,10 +28,7 @@ const NewQuestion: FC<NewQuestionProps> = ({
       </Helmet>
       <div className="new-question">
         <h2 className="new-question__title">Create New Question</h2>
-        <form
-          className="new-question__form"
-          onSubmit={handleSubmit}
-        >
+        <form className="new-question__form" onSubmit={handleSubmit}>
           <p>Would you rather...</p>
           <input
             type="text"

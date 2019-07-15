@@ -10,7 +10,10 @@ type QuestionsAction =
   | AnswerQuestionAction
   | GetQuestionsAction
 
-export default function questions(state: QuestionsState = {}, action: QuestionsAction) {
+export default function questions(
+  state: QuestionsState = {},
+  action: QuestionsAction
+) {
   switch (action.type) {
     case ActionType.GET_QUESTIONS_SUCCEED:
       return {
