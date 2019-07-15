@@ -52,7 +52,7 @@ const Login: FC<LoginProps> = ({
           <button
             type="submit"
             className="btn"
-            disabled={'' === user}
+            disabled={user === ''}
           >
             Submit
           </button>

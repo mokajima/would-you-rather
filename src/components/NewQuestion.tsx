@@ -52,7 +52,7 @@ const NewQuestion: FC<NewQuestionProps> = ({
           <button
             type="submit"
             className="new-question__btn btn"
-            disabled={'' === optionOne || '' === optionTwo}
+            disabled={optionOne === '' || optionTwo === ''}
           >
             Submit
           </button>

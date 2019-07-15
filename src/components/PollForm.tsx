@@ -33,7 +33,7 @@ const PollForm: FC<PollFormProps> = ({
           type="radio"
           className="radio"
           value="optionOne"
-          checked={'optionOne' === answer}
+          checked={answer === 'optionOne'}
           onChange={handleChange}
         />
         {question.optionOne.text}
@@ -43,7 +43,7 @@ const PollForm: FC<PollFormProps> = ({
           type="radio"
           className="radio"
           value="optionTwo"
-          checked={'optionTwo' === answer}
+          checked={answer === 'optionTwo'}
           onChange={handleChange}
         />
         {question.optionTwo.text}
