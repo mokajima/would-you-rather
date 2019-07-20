@@ -1,8 +1,8 @@
-import { Question } from '../utils/_DATA'
+import { Questions } from '../utils/_DATA'
 import * as ActionType from './constants'
 
 interface GetQuestionParams {
-  questions: Question[]
+  questions: Questions
 }
 
 export const getQuestions = {
