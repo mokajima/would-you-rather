@@ -92,6 +92,17 @@ module.exports = {
         tsx: 'never'
       }
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '**/__specs__/**',
+          '**/*/*.spec.*',
+          '**/__tests__/**',
+          '**/*/*.test.*'
+        ]
+      }
+    ],
     'import/prefer-default-export': 'off',
 
     // prettier

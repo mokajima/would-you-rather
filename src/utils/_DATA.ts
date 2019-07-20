@@ -33,7 +33,7 @@ export interface Option {
   text: string
 }
 
-let users: Users = {
+export let users: Users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
@@ -69,7 +69,7 @@ let users: Users = {
   }
 }
 
-let questions: Questions = {
+export let questions: Questions = {
   '8xf0y6ziyjabvozdd253nd': {
     id: '8xf0y6ziyjabvozdd253nd',
     author: 'sarahedo',
