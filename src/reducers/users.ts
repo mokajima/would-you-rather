@@ -5,9 +5,14 @@ import { GetUsersAction } from '../actions/users'
 
 export type UsersState = Users
 
+export const usersInitialState = {}
+
 type UsersAction = AddQuestionAction | AnswerQuestionAction | GetUsersAction
 
-export default function users(state: UsersState = {}, action: UsersAction) {
+export default function users(
+  state: UsersState = usersInitialState,
+  action: UsersAction
+) {
   switch (action.type) {
     case ActionType.GET_USERS_SUCCEED:
       return {

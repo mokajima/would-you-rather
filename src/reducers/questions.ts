@@ -5,13 +5,15 @@ import { GetQuestionsAction } from '../actions/questions'
 
 export type QuestionsState = Questions
 
+export const questionsInitialState = {}
+
 type QuestionsAction =
   | AddQuestionAction
   | AnswerQuestionAction
   | GetQuestionsAction
 
 export default function questions(
-  state: QuestionsState = {},
+  state: QuestionsState = questionsInitialState,
   action: QuestionsAction
 ) {
   switch (action.type) {

@@ -4,8 +4,10 @@ import { authedUserAction } from '../actions/authedUser'
 
 export type AuthedUserState = User['id']
 
+export const authedUserInitialState = ''
+
 export default function authedUser(
-  state: AuthedUserState = '',
+  state: AuthedUserState = authedUserInitialState,
   action: authedUserAction
 ) {
   switch (action.type) {
