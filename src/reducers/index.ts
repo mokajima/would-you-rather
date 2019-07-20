@@ -27,7 +27,7 @@ export const initialState = {
   loadingBar: LoadingBarInitialState
 }
 
-export default combineReducers<any>({
+export default combineReducers<State>({
   authedUser,
   users,
   questions,
