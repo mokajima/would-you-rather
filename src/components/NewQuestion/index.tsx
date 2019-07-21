@@ -1,7 +1,7 @@
 import React, { FC, FormEvent, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { User, Option } from '../utils/_DATA'
-import './NewQuestion.css'
+import { User, Option } from '../../utils/_DATA'
+import './index.css'
 
 interface NewQuestionProps {
   authedUser: User['id']

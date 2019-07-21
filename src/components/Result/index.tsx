@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { Question } from '../utils/_DATA'
-import Data from '../containers/Data'
-import './Result.css'
+import { Question } from '../../utils/_DATA'
+import Data from '../../containers/Data'
+import './index.css'
 
 interface ResultProps {
   id: Question['id']

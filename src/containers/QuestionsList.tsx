@@ -23,6 +23,8 @@ const QuestionsListContainer = () => {
     <QuestionsList
       unansweredQuestions={unansweredQuestions}
       answeredQuestions={answeredQuestions}
+      questions={questions}
+      users={users}
     />
   )
 }

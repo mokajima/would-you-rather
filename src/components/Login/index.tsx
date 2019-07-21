@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, FormEvent, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { Users, User } from '../utils/_DATA'
-import './Login.css'
+import { Users, User } from '../../utils/_DATA'
+import './index.css'
 
 interface LoginProps {
   users: Users

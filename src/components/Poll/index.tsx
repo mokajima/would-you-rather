@@ -1,17 +1,18 @@
 import React, { FC } from 'react'
-import { Question, User, Answer } from '../utils/_DATA'
-import Result from './Result'
-import PollForm from '../containers/PollForm'
-import logo from '../logo.svg'
-import './Poll.css'
+import { Question, User, Answer } from '../../utils/_DATA'
+import Result from '../Result'
+import PollForm from '../PollForm'
+import logo from '../../logo.svg'
+import './index.css'
 
 interface PollProps {
-  question: Question
+  question: Question | undefined
   author: User | null
   answer: Answer | null
+  answerQuestion: (qid: Question['id'], answer: Answer) => void
 }
 
-const Poll: FC<PollProps> = ({ question, author, answer }) => {
+const Poll: FC<PollProps> = ({ question, author, answer, answerQuestion }) => {
   if (!question) {
     return (
       <div>
@@ -32,7 +33,11 @@ const Poll: FC<PollProps> = ({ question, author, answer }) => {
             <img className="avatar avatar--lg" src={author.avatarURL} alt="" />
           )}
         </div>
-        {answer ? <Result id={question.id} /> : <PollForm id={question.id} />}
+        {answer ? (
+          <Result id={question.id} />
+        ) : (
+          <PollForm question={question} answerQuestion={answerQuestion} />
+        )}
       </div>
     </div>
   )

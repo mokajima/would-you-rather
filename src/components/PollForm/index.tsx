@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, FormEvent, useState } from 'react'
-import { Question, Answer } from '../utils/_DATA'
-import './PollForm.css'
+import { Question, Answer } from '../../utils/_DATA'
+import './index.css'
 
 interface PollFormProps {
   question: Question

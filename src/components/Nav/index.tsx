@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
-import { User } from '../utils/_DATA'
-import './Nav.css'
+import { User } from '../../utils/_DATA'
+import './index.css'
 
 interface NavProps {
   user: User | null

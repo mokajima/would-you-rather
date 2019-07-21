@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { Question, Answer } from '../utils/_DATA'
-import './Data.css'
+import { Question, Answer } from '../../utils/_DATA'
+import './index.css'
 
 interface DataProps {
   question: Question
