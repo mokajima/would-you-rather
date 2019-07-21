@@ -96,6 +96,10 @@ module.exports = {
       'error',
       {
         devDependencies: [
+          '.storybook/**',
+          'stories/**',
+          '**/*/*.story.*',
+          '**/*/*.stories.*',
           '**/__specs__/**',
           '**/*/*.spec.*',
           '**/__tests__/**',
