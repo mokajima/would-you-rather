@@ -34,7 +34,7 @@ const App: FC<{}> = () => {
           <LoadingBar style={{ backgroundColor: '#15b394' }} />
           <header className="header">
             <div className="header__inner">
-              <h1 className="header__title">
+              <h1 data-testid="header-title" className="header__title">
                 <Link to="/">Would You Rather...?</Link>
               </h1>
               <Nav />

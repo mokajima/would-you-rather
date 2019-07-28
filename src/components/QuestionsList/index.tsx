@@ -18,12 +18,12 @@ const QuestionsList: FC<QuestionsListProps> = ({
   users
 }) => (
   <Tabs>
-    <TabList>
+    <TabList data-testid="tab-list">
       <Tab>Unanswered Questions</Tab>
       <Tab>Answered Questions</Tab>
     </TabList>
 
-    <TabPanel>
+    <TabPanel data-testid="unanswered-questions">
       {unansweredQuestions.map(id => (
         <Question
           key={id}

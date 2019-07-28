@@ -31,6 +31,7 @@ const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
         <form className="new-question__form" onSubmit={handleSubmit}>
           <p>Would you rather...</p>
           <input
+            data-testid="option-one"
             type="text"
             className="input"
             name="optionOne"
@@ -40,6 +41,7 @@ const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
           />
           <hr />
           <input
+            data-testid="option-two"
             type="text"
             className="input"
             name="optionTwo"
@@ -48,6 +50,7 @@ const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
             onChange={e => setOptionTwo(e.target.value)}
           />
           <button
+            data-testid="submit"
             type="submit"
             className="new-question__btn btn"
             disabled={optionOne === '' || optionTwo === ''}

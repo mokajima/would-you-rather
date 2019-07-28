@@ -44,7 +44,7 @@ const PollForm: FC<PollFormProps> = ({ answerQuestion, question }) => {
         />
         {question.optionTwo.text}
       </label>
-      <button type="submit" className="btn">
+      <button data-testid="submit" type="submit" className="btn">
         Submit
       </button>
     </form>

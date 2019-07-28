@@ -25,7 +25,7 @@ const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
       <Helmet>
         <title>Login | Would You Rather?</title>
       </Helmet>
-      <div className="login-form container">
+      <div data-testid="login-form" className="login-form container">
         <header className="login-form__header">
           <h2 className="login-form__title">
             Welcome to the Would You Rather App!
@@ -33,7 +33,12 @@ const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
           <p className="login-form__desc">Please sign in to continue</p>
         </header>
         <form className="login-form__form" onSubmit={handleSubmit}>
-          <select className="select" value={user} onChange={handleChange}>
+          <select
+            data-testid="select"
+            className="select"
+            value={user}
+            onChange={handleChange}
+          >
             <option value="">Select User</option>
             {Object.keys(users).map(id => (
               <option key={id} value={id}>
@@ -41,7 +46,12 @@ const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
               </option>
             ))}
           </select>
-          <button type="submit" className="btn" disabled={user === ''}>
+          <button
+            data-testid="submit"
+            type="submit"
+            className="btn"
+            disabled={user === ''}
+          >
             Submit
           </button>
         </form>

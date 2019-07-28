@@ -8,7 +8,7 @@ interface ResultProps {
 }
 
 const Result: FC<ResultProps> = ({ id }) => (
-  <div className="result">
+  <div data-testid="result" className="result">
     <p className="result__title">Results:</p>
     <Data id={id} option="optionOne" />
     <Data id={id} option="optionTwo" />
