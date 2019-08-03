@@ -13,7 +13,7 @@ import NewQuestion from './containers/NewQuestion'
 import QuestionsList from './containers/QuestionsList'
 import LeaderBoard from './containers/LeaderBoard'
 import Poll from './containers/Poll'
-import * as styles from './App.module.css'
+import './App.css'
 
 const App: FC<{}> = () => {
   const authedUser = useSelector((state: State) => state.authedUser)
@@ -32,16 +32,16 @@ const App: FC<{}> = () => {
       <BrowserRouter>
         <div>
           <LoadingBar style={{ backgroundColor: '#15b394' }} />
-          <header className={styles.header}>
-            <div className={styles.headerInner}>
-              <h1 data-testid="header-title" className={styles.headerTitle}>
+          <header className="header">
+            <div className="header__inner">
+              <h1 data-testid="header-title" className="header__title">
                 <Link to="/">Would You Rather...?</Link>
               </h1>
               <Nav />
             </div>
           </header>
           {authedUser ? (
-            <div className={styles.container}>
+            <div className="container">
               <Route path="/" exact component={QuestionsList} />
               <Route path="/add" component={NewQuestion} />
               <Route path="/leaderboard" component={LeaderBoard} />

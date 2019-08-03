@@ -3,7 +3,7 @@
   margin-bottom: 50px;
 }
 
-.headerInner {
+.header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,24 +13,19 @@
   margin: 0 auto;
 }
 
-.headerTitle {
+.header__title {
   color: #15b394;
   font-family: "Life Savers", cursive;
   font-size: 1.5em;
   margin: 0;
 }
 
-.headerTitle a {
+.header__title a {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.headerTitle a:hover {
+.header__title a:hover {
   color: #15b394;
-}
-
-.container {
-  margin: 0 auto 50px;
-  width: 890px;
 }
