@@ -5,6 +5,10 @@ interface AddQuestionParams {
   question: Question
 }
 
+interface AddQuestionResult {
+  question: Question
+}
+
 interface AnswerQuestionParams {
   authedUser: User['id']
   qid: Question['id']
@@ -17,9 +21,9 @@ export const addQuestion = {
     payload: params
   }),
 
-  succeed: (params: AddQuestionParams) => ({
+  succeed: (result: AddQuestionResult) => ({
     type: ActionType.ADD_QUESTION_SUCCEED as typeof ActionType.ADD_QUESTION_SUCCEED,
-    payload: params
+    payload: { result }
   })
 }
 
@@ -31,7 +35,7 @@ export const answerQuestion = {
 
   succeed: (params: AnswerQuestionParams) => ({
     type: ActionType.ANSWER_QUESTION_SUCCEED as typeof ActionType.ANSWER_QUESTION_SUCCEED,
-    payload: params
+    payload: { params }
   })
 }
 

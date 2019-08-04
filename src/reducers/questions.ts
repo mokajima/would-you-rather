@@ -20,10 +20,10 @@ export default function questions(
     case ActionType.GET_QUESTIONS_SUCCEED:
       return {
         ...state,
-        ...action.payload.questions
+        ...action.payload.result.questions
       }
     case ActionType.ADD_QUESTION_SUCCEED: {
-      const { question } = action.payload
+      const { question } = action.payload.result
 
       return {
         ...state,
@@ -31,7 +31,7 @@ export default function questions(
       }
     }
     case ActionType.ANSWER_QUESTION_SUCCEED: {
-      const { authedUser, qid, answer } = action.payload
+      const { authedUser, qid, answer } = action.payload.params
 
       return {
         ...state,

@@ -1,7 +1,7 @@
 import { Users } from '../utils/_DATA'
 import * as ActionType from './constants'
 
-interface GetUsersParams {
+interface GetUsersResult {
   users: Users
 }
 
@@ -10,9 +10,9 @@ export const getUsers = {
     type: ActionType.GET_USERS_START as typeof ActionType.GET_USERS_START
   }),
 
-  succeed: (params: GetUsersParams) => ({
+  succeed: (result: GetUsersResult) => ({
     type: ActionType.GET_USERS_SUCCEED as typeof ActionType.GET_USERS_SUCCEED,
-    payload: params
+    payload: { result }
   })
 }
 
