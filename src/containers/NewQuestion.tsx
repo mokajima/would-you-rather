@@ -1,16 +1,15 @@
 import React, { FC } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { RouteComponentProps, withRouter } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { State } from '../reducers'
 import { User, Option, formatQuestion } from '../utils/_DATA'
 import { addQuestion } from '../actions/shared'
 import NewQuestion from '../components/NewQuestion'
 
-type NewQuestionContainerProps = {} & RouteComponentProps<{}>
-
-const NewQuestionContainer: FC<NewQuestionContainerProps> = ({ history }) => {
+const NewQuestionContainer: FC = () => {
   const authedUser = useSelector((state: State) => state.authedUser)
   const dispatch = useDispatch()
+  const history = useHistory()
 
   return (
     <NewQuestion
@@ -32,4 +31,4 @@ const NewQuestionContainer: FC<NewQuestionContainerProps> = ({ history }) => {
   )
 }
 
-export default withRouter(NewQuestionContainer)
+export default NewQuestionContainer
