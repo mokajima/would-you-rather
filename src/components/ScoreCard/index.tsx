@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { User } from '../../utils/_DATA'
+import { User } from 'utils/_DATA'
 import './index.css'
 
 interface ScoreCardProps {

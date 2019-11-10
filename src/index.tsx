@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom'
 import { applyMiddleware, compose, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import createSagaMiddleware from 'redux-saga'
-import reducer from './reducers'
-import App from './App'
-import './index.css'
-import rootSaga from './sagas'
+import reducer from 'reducers'
+import App from 'App'
+import 'index.css'
+import rootSaga from 'sagas'
 
 /* eslint-disable no-underscore-dangle, @typescript-eslint/no-explicit-any */
 const composeEnhancers =

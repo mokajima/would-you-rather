@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
 import { array } from '@storybook/addon-knobs'
-import { questions, users } from '../../utils/_DATA'
+import { questions, users } from 'utils/_DATA'
 import QuestionsList from '.'
 
 storiesOf('QuestionsList', module)

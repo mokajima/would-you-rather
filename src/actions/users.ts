@@ -1,4 +1,4 @@
-import { Users } from '../utils/_DATA'
+import { Users } from 'utils/_DATA'
 import * as ActionType from './constants'
 
 interface GetUsersResult {

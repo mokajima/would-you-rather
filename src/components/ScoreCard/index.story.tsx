@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { number, object } from '@storybook/addon-knobs'
-import { users } from '../../utils/_DATA'
+import { users } from 'utils/_DATA'
 import ScoreCard from '.'
 
 storiesOf('ScoreCard', module).add('default', () => (

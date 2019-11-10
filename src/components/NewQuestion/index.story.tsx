@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { text } from '@storybook/addon-knobs'
-import { users } from '../../utils/_DATA'
+import { users } from 'utils/_DATA'
 import NewQuestion from '.'
 
 const authedUser = Object.keys(users)[0]

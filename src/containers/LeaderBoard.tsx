@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { State } from '../reducers'
-import LeaderBoard from '../components/LeaderBoard'
+import { State } from 'reducers'
+import LeaderBoard from 'components/LeaderBoard'
 
 const LeaderBoardContainer = () => {
   const users = useSelector((state: State) => state.users)

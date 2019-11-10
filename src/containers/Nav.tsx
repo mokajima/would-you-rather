@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { State } from '../reducers'
-import { removeAuthedUser } from '../actions/authedUser'
-import Nav from '../components/Nav'
+import { State } from 'reducers'
+import { removeAuthedUser } from 'actions/authedUser'
+import Nav from 'components/Nav'
 
 const NavContainer: FC = () => {
   const authedUser = useSelector((state: State) => state.authedUser)

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Helmet } from 'react-helmet'
-import { User } from '../utils/_DATA'
-import ScoreCard from '../containers/ScoreCard'
+import { User } from 'utils/_DATA'
+import ScoreCard from 'containers/ScoreCard'
 
 interface LeaderBoardProps {
   userIds: User['id'][]

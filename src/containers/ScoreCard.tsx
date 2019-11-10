@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
-import { User } from '../utils/_DATA'
-import { State } from '../reducers'
-import ScoreCard from '../components/ScoreCard'
+import { User } from 'utils/_DATA'
+import { State } from 'reducers'
+import ScoreCard from 'components/ScoreCard'
 
 interface ScoreCardContainerProps {
   id: User['id']

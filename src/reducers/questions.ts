@@ -1,7 +1,7 @@
-import { Questions } from '../utils/_DATA'
-import * as ActionType from '../actions/constants'
-import { AddQuestionAction, AnswerQuestionAction } from '../actions/shared'
-import { GetQuestionsAction } from '../actions/questions'
+import { Questions } from 'utils/_DATA'
+import * as ActionType from 'actions/constants'
+import { AddQuestionAction, AnswerQuestionAction } from 'actions/shared'
+import { GetQuestionsAction } from 'actions/questions'
 
 export type QuestionsState = Questions
 

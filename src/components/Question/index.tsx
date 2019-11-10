@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Question as QuestionType, User } from '../../utils/_DATA'
+import { Question as QuestionType, User } from 'utils/_DATA'
 import './index.css'
 
 interface QuestionProps {

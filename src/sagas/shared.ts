@@ -1,9 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
-import { _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA'
-import * as ActionType from '../actions/constants'
-import { addQuestion, answerQuestion } from '../actions/shared'
+import { _saveQuestion, _saveQuestionAnswer } from 'utils/_DATA'
+import * as ActionType from 'actions/constants'
+import { addQuestion, answerQuestion } from 'actions/shared'
 
 export function* runAddQuestion(action: ReturnType<typeof addQuestion.start>) {
   try {

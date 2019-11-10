@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
 import { object } from '@storybook/addon-knobs'
-import { users } from '../../utils/_DATA'
+import { users } from 'utils/_DATA'
 import Nav from '.'
 
 const user = users[Object.keys(users)[0]]

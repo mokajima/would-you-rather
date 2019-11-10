@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { State } from '../reducers'
-import QuestionsList from '../components/QuestionsList'
+import { State } from 'reducers'
+import QuestionsList from 'components/QuestionsList'
 
 const QuestionsListContainer = () => {
   const authedUser = useSelector((state: State) => state.authedUser)

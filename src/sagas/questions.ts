@@ -1,9 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
-import { _getQuestions } from '../utils/_DATA'
-import * as ActionType from '../actions/constants'
-import { getQuestions } from '../actions/questions'
+import { _getQuestions } from 'utils/_DATA'
+import * as ActionType from 'actions/constants'
+import { getQuestions } from 'actions/questions'
 
 export function* runGetQuestions() {
   try {

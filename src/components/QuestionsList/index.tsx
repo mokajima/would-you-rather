@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
-import { Questions, Question as QuestionType, Users } from '../../utils/_DATA'
+import { Questions, Question as QuestionType, Users } from 'utils/_DATA'
 import Question from '../Question'
 import './index.css'
 

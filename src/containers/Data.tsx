@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
-import { State } from '../reducers'
-import { Question, Answer } from '../utils/_DATA'
-import Data from '../components/Data'
+import { State } from 'reducers'
+import { Question, Answer } from 'utils/_DATA'
+import Data from 'components/Data'
 
 interface DataContainerProps {
   id: Question['id']

@@ -1,6 +1,6 @@
-import { User } from '../utils/_DATA'
-import * as ActionType from '../actions/constants'
-import { authedUserAction } from '../actions/authedUser'
+import { User } from 'utils/_DATA'
+import * as ActionType from 'actions/constants'
+import { authedUserAction } from 'actions/authedUser'
 
 export type AuthedUserState = User['id']
 

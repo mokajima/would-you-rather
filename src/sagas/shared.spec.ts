@@ -2,10 +2,10 @@ import { Reducer } from 'redux'
 import { call } from 'redux-saga/effects'
 import { expectSaga } from 'redux-saga-test-plan'
 import { showLoading, hideLoading } from 'react-redux-loading'
-import reducer, { initialState } from '../reducers'
+import reducer, { initialState } from 'reducers'
 import { watchAddQuestion, watchAnswerQuestion } from './shared'
-import * as actions from '../actions/shared'
-import { Answer, _saveQuestion, _saveQuestionAnswer } from '../utils/_DATA'
+import * as actions from 'actions/shared'
+import { Answer, _saveQuestion, _saveQuestionAnswer } from 'utils/_DATA'
 
 const fakeAnswer = {
   authedUser: 'sarahedo',

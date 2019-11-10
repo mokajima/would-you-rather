@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
 import { object } from '@storybook/addon-knobs'
-import { questions, users } from '../../utils/_DATA'
+import { questions, users } from 'utils/_DATA'
 import Question from '.'
 
 const author = users[Object.keys(users)[0]]

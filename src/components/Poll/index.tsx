@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import { Question, User, Answer } from '../../utils/_DATA'
+import { Question, User, Answer } from 'utils/_DATA'
 import Result from '../Result'
 import PollForm from '../PollForm'
-import logo from '../../logo.svg'
+import logo from 'logo.svg'
 import './index.css'
 
 interface PollProps {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { number, object } from '@storybook/addon-knobs'
-import { Answer, questions } from '../../utils/_DATA'
+import { Answer, questions } from 'utils/_DATA'
 import Data from '.'
 
 const question = questions[Object.keys(questions)[0]]

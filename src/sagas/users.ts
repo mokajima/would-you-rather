@@ -1,9 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { showLoading, hideLoading } from 'react-redux-loading'
 
-import { _getUsers } from '../utils/_DATA'
-import * as ActionType from '../actions/constants'
-import { getUsers } from '../actions/users'
+import { _getUsers } from 'utils/_DATA'
+import * as ActionType from 'actions/constants'
+import { getUsers } from 'actions/users'
 
 export function* runGetUsers() {
   try {

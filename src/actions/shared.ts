@@ -1,4 +1,4 @@
-import { Question, User, Answer } from '../utils/_DATA'
+import { Question, User, Answer } from 'utils/_DATA'
 import * as ActionType from './constants'
 
 interface AddQuestionParams {
