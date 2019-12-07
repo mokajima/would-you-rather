@@ -11,7 +11,7 @@ const PollContainer: FC = () => {
   const users = useSelector((state: State) => state.users)
   const questions = useSelector((state: State) => state.questions)
   const dispatch = useDispatch()
-  const { id } = useParams()
+  const { id } = useParams<{ id: string }>()
 
   const question = questions[id]
   const author = question ? users[question.author] : null
