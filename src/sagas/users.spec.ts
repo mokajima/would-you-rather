@@ -3,9 +3,9 @@ import { call } from 'redux-saga/effects'
 import { expectSaga } from 'redux-saga-test-plan'
 import { showLoading, hideLoading } from 'react-redux-loading'
 import reducer, { initialState } from 'reducers'
-import { watchGetUsers } from './users'
 import * as actions from 'actions/users'
 import { users, _getUsers } from 'utils/_DATA'
+import { watchGetUsers } from './users'
 
 describe("Users sagas' saga", () => {
   describe("Get users' saga", () => {
