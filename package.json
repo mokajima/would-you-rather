@@ -30,7 +30,7 @@
     "cypress": "cypress open",
     "cypress:run": "cypress run",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext ./ 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook -o build/storybook"
   },
@@ -51,8 +51,10 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addon-storyshots": "^5.1.9",
     "@storybook/react": "^5.1.9",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
+    "@types/eslint-plugin-prettier": "^2.2.0",
+    "@types/prettier": "^1.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
     "babel-plugin-macros": "^2.6.1",
     "cypress": "^3.4.0",
     "eslint-config-airbnb": "^17.1.1",
@@ -60,18 +62,14 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jest": "^22.7.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.12.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "prettier": "^1.18.2",
+    "eslint-plugin-prefer-arrow": "^1.1.7",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "prettier": "^1.19.1",
     "react-docgen-typescript-loader": "^3.1.0",
     "react-test-renderer": "^16.8.6",
     "redux-saga-test-plan": "^4.0.0-beta.2",
     "require-context.macro": "^1.1.0"
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
