@@ -10,7 +10,7 @@ interface LeaderBoardProps {
 const LeaderBoard: FC<LeaderBoardProps> = ({ userIds }) => (
   <>
     <Helmet>
-      <title>Leader Board | Would You Rather?</title>
+      <title>Leader Board</title>
     </Helmet>
     <div>
       {userIds.map(id => (

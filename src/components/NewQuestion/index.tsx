@@ -24,7 +24,7 @@ const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
   return (
     <>
       <Helmet>
-        <title>Create New Question | Would You Rather?</title>
+        <title>Create New Question</title>
       </Helmet>
       <div className="new-question">
         <h2 className="new-question__title">Create New Question</h2>

@@ -23,7 +23,7 @@ const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
   return (
     <>
       <Helmet>
-        <title>Login | Would You Rather?</title>
+        <title>Login</title>
       </Helmet>
       <div data-testid="login-form" className="login-form container">
         <header className="login-form__header">

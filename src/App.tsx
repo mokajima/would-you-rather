@@ -26,9 +26,10 @@ const App: FC<{}> = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Would You Rather?</title>
-      </Helmet>
+      <Helmet
+        defaultTitle="Would You Rather?"
+        titleTemplate="%s | Would You Rather?"
+      />
       <BrowserRouter>
         <div>
           <LoadingBar style={{ backgroundColor: '#15b394' }} />
