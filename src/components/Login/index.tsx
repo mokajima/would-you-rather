@@ -9,7 +9,7 @@ interface LoginProps {
 }
 
 const Login: FC<LoginProps> = ({ users, setAuthedUser }) => {
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState<string>('')
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setUser(e.target.value)

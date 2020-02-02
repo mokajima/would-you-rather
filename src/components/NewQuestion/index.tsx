@@ -13,8 +13,8 @@ interface NewQuestionProps {
 }
 
 const NewQuestion: FC<NewQuestionProps> = ({ authedUser, addQuestion }) => {
-  const [optionOne, setOptionOne] = useState('')
-  const [optionTwo, setOptionTwo] = useState('')
+  const [optionOne, setOptionOne] = useState<string>('')
+  const [optionTwo, setOptionTwo] = useState<string>('')
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
